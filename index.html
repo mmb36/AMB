@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AMB Motors | Ashok Leyland Authorised Service Center</title>
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+  rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+
+      background:
+      radial-gradient(circle at top right,#00384a 0%,#0b1118 35%),
+      linear-gradient(to bottom,#091018,#0b1118);
+
+      color:#fff;
+      overflow-x:hidden;
+
+    }
+
+    :root{
+
+      --primary:#00bfff;
+      --secondary:#0086b0;
+      --dark:#0b1118;
+      --card:#182230;
+      --text:#d1d1d1;
+
+    }
+
+    /* ===================================
+       HEADER
+    =================================== */
+
+    header{
+
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+
+      background:rgba(5,10,18,0.85);
+      backdrop-filter:blur(14px);
+
+      border-bottom:1px solid rgba(255,255,255,0.08);
+
+      box-shadow:0 5px 20px rgba(0,0,0,0.25);
+
+    }
+
+    .navbar{
+
+      width:90%;
+      margin:auto;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:18px 0;
+
+    }
+
+    .logo{
+
+      font-size:38px;
+      font-weight:800;
+      text-transform:uppercase;
+      color:#fff;
+
+    }
+
+    .logo span{
+      color:var(--primary);
+    }
+
+    .nav-links{
+
+      display:flex;
+      gap:35px;
+
+    }
+
+    .nav-links a{
+
+      text-decoration:none;
+      color:#fff;
+
+      font-size:15px;
+      font-weight:500;
+
+      text-transform:uppercase;
+
+      transition:0.3s;
+
+      position:relative;
+
+    }
+
+    .nav-links a::after{
+
+      content:'';
+      position:absolute;
+
+      left:0;
+      bottom:-6px;
+
+      width:0%;
+      height:2px;
+
+      background:var(--primary);
+
+      transition:0.3s;
+
+    }
+
+    .nav-links a:hover::after{
+      width:100%;
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+    }
+
+    /* ===================================
+       HERO SECTION
+    =================================== */
+
+    .hero{
+
+      width:100%;
+      height:100vh;
+
+      position:relative;
+      overflow:hidden;
+
+    }
+
+    .slider{
+
+      width:100%;
+      height:100%;
+
+      position:relative;
+
+    }
+
+    .slide{
+
+      position:absolute;
+
+      width:100%;
+      height:100%;
+
+      opacity:0;
+
+      transition:1s ease-in-out;
+
+    }
+
+    .slide.active{
+
+      opacity:1;
+      z-index:1;
+
+    }
+
+    .slide img{
+
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+
+      animation:zoomEffect 8s linear infinite;
+
+    }
+
+    @keyframes zoomEffect{
+
+      0%{
+        transform:scale(1.05);
+      }
+
+      100%{
+        transform:scale(1.12);
+      }
+
+    }
+
+    .overlay{
+
+      position:absolute;
+      inset:0;
+
+      background:
+      linear-gradient(
+        to right,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.35)
+      );
+
+    }
+
+    .hero-content{
+
+      position:absolute;
+
+      top:50%;
+      left:8%;
+
+      transform:translateY(-50%);
+
+      z-index:5;
+
+      max-width:720px;
+
+    }
+
+    .hero-content h1{
+
+      font-size:82px;
+      line-height:1.05;
+
+      margin-bottom:20px;
+
+      font-weight:800;
+
+      text-transform:uppercase;
+
+      text-shadow:0 10px 30px rgba(0,0,0,0.45);
+
+    }
+
+    .hero-content h1 span{
+      color:var(--primary);
+    }
+
+    .hero-content p{
+
+      font-size:20px;
+      line-height:1.9;
+
+      color:#ddd;
+
+      margin-bottom:35px;
+
+      max-width:620px;
+
+    }
+
+    .hero-buttons{
+
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+
+    }
+
+    .btn{
+
+      display:inline-block;
+
+      padding:15px 35px;
+
+      border-radius:50px;
+
+      text-decoration:none;
+
+      font-weight:600;
+
+      transition:0.4s;
+
+    }
+
+    .btn-primary{
+
+      background:linear-gradient(
+        135deg,
+        #00bfff,
+        #0086b0
+      );
+
+      color:#fff;
+
+      box-shadow:
+      0 12px 30px rgba(0,191,255,0.35);
+
+    }
+
+    .btn-primary:hover{
+
+      transform:translateY(-6px);
+
+    }
+
+    .btn-secondary{
+
+      border:2px solid rgba(255,255,255,0.5);
+
+      color:#fff;
+
+    }
+
+    .btn-secondary:hover{
+
+      background:#fff;
+      color:#000;
+
+      transform:translateY(-6px);
+
+    }
+
+    /* ===================================
+       HERO NAVIGATION
+    =================================== */
+
+    .nav-btn{
+
+      position:absolute;
+
+      top:50%;
+      transform:translateY(-50%);
+
+      width:70px;
+      height:70px;
+
+      border-radius:50%;
+      border:none;
+
+      background:rgba(255,255,255,0.08);
+
+      border:1px solid rgba(255,255,255,0.12);
+
+      backdrop-filter:blur(12px);
+
+      color:#fff;
+      font-size:24px;
+
+      cursor:pointer;
+
+      z-index:10;
+
+      transition:0.4s;
+
+    }
+
+    .nav-btn:hover{
+
+      background:linear-gradient(
+        135deg,
+        #00bfff,
+        #0086b0
+      );
+
+      transform:translateY(-50%) scale(1.08);
+
+    }
+
+    .prev{
+      left:30px;
+    }
+
+    .next{
+      right:30px;
+    }
+
+    /* ===================================
+       DOTS
+    =================================== */
+
+    .dots{
+
+      position:absolute;
+
+      bottom:35px;
+      left:50%;
+
+      transform:translateX(-50%);
+
+      display:flex;
+      gap:12px;
+
+      z-index:10;
+
+    }
+
+    .dot{
+
+      width:15px;
+      height:15px;
+
+      border-radius:50%;
+
+      border:2px solid rgba(255,255,255,0.5);
+
+      background:transparent;
+
+      cursor:pointer;
+
+      transition:0.3s;
+
+    }
+
+    .dot.active{
+
+      background:#00d9ff;
+
+      box-shadow:0 0 15px rgba(0,217,255,0.75);
+
+    }
+
+    /* ===================================
+       COMMON SECTION
+    =================================== */
+
+    .section{
+
+      padding:110px 10%;
+      position:relative;
+
+    }
+
+    .mechanics-container{
+
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(320px,1fr));
+
+      gap:70px;
+
+      align-items:center;
+
+    }
+
+    .mechanics-image{
+
+      position:relative;
+
+    }
+
+    .mechanics-image::before{
+
+      content:'';
+
+      position:absolute;
+
+      inset:-12px;
+
+      border-radius:30px;
+
+      background:linear-gradient(
+        135deg,
+        rgba(0,217,255,0.25),
+        transparent,
+        rgba(0,166,214,0.18)
+      );
+
+      z-index:-1;
+
+    }
+
+    .mechanics-image img{
+
+      width:100%;
+
+      border-radius:28px;
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      box-shadow:
+      0 25px 60px rgba(0,0,0,0.45),
+      0 0 40px rgba(0,166,214,0.08);
+
+      transition:0.5s ease;
+
+    }
+
+    .mechanics-image img:hover{
+
+      transform:scale(1.03);
+
+    }
+
+    .tag{
+
+      display:inline-block;
+
+      padding:10px 18px;
+
+      border-radius:30px;
+
+      background:rgba(0,217,255,0.12);
+
+      border:1px solid rgba(0,217,255,0.15);
+
+      color:#00d9ff;
+
+      margin-bottom:20px;
+
+      font-weight:600;
+
+      text-transform:uppercase;
+
+    }
+
+    .mechanics-content h2{
+
+      font-size:56px;
+      line-height:1.1;
+
+      margin-bottom:30px;
+
+      font-weight:800;
+
+    }
+
+    .mechanics-content h2 span{
+      color:#00d9ff;
+    }
+
+    .mechanics-content p{
+
+      color:var(--text);
+
+      line-height:1.9;
+
+      margin-bottom:25px;
+
+      font-size:17px;
+
+    }
+
+    .feature-box{
+
+      background:
+      linear-gradient(
+        145deg,
+        rgba(28,38,52,0.95),
+        rgba(17,24,34,0.95)
+      );
+
+      padding:24px;
+
+      border-radius:18px;
+
+      margin-bottom:20px;
+
+      border:1px solid rgba(255,255,255,0.05);
+
+      transition:0.3s;
+
+      position:relative;
+      overflow:hidden;
+
+    }
+
+    .feature-box::before{
+
+      content:'';
+
+      position:absolute;
+
+      top:0;
+      left:0;
+
+      width:5px;
+      height:100%;
+
+      background:linear-gradient(
+        to bottom,
+        #00d9ff,
+        #0086b0
+      );
+
+    }
+
+    .feature-box:hover{
+
+      transform:translateY(-8px);
+
+      border-color:#00d9ff;
+
+    }
+
+    .feature-box h3{
+
+      margin-bottom:10px;
+      font-size:22px;
+
+    }
+
+    .feature-box p{
+
+      margin:0;
+      font-size:15px;
+      color:#bbb;
+
+    }
+
+    /* ===================================
+       LEYPARTS SECTION
+    =================================== */
+
+    .leyparts-layout .mechanics-image{
+      order:1;
+    }
+
+    .leyparts-layout .mechanics-content{
+      order:2;
+    }
+
+    /* ===================================
+       ABOUT SECTION
+    =================================== */
+
+    .about-layout .mechanics-content{
+      order:1;
+    }
+
+    .about-layout .mechanics-image{
+      order:2;
+    }
+
+    /* ===================================
+       MECHANICS SECTION
+    =================================== */
+
+    .mechanics-section .mechanics-image{
+      order:1;
+    }
+
+    .mechanics-section .mechanics-content{
+      order:2;
+    }
+
+    /* ===================================
+       SERVICES SECTION
+    =================================== */
+
+    .services{
+
+      background:#0c121b;
+
+    }
+
+    .section-title{
+
+      text-align:center;
+      margin-bottom:60px;
+
+    }
+
+    .section-title h2{
+
+      font-size:48px;
+      margin-bottom:15px;
+
+    }
+
+    .section-title h2 span{
+      color:var(--primary);
+    }
+
+    .service-grid{
+
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(250px,1fr));
+
+      gap:30px;
+
+    }
+
+    .card{
+
+      background:
+      linear-gradient(
+        145deg,
+        rgba(28,38,52,0.96),
+        rgba(16,22,32,0.96)
+      );
+
+      padding:35px;
+
+      border-radius:20px;
+
+      border:1px solid rgba(255,255,255,0.05);
+
+      transition:0.4s;
+
+      position:relative;
+      overflow:hidden;
+
+    }
+
+    .card::before{
+
+      content:'';
+
+      position:absolute;
+
+      top:0;
+      left:0;
+
+      width:100%;
+      height:4px;
+
+      background:linear-gradient(
+        to right,
+        #00d9ff,
+        #0086b0
+      );
+
+    }
+
+    .card:hover{
+
+      transform:translateY(-12px);
+
+      border-color:#00d9ff;
+
+    }
+
+    .card i{
+
+      font-size:48px;
+
+      color:#00d9ff;
+
+      margin-bottom:20px;
+
+    }
+
+    .card h3{
+
+      margin-bottom:15px;
+      font-size:26px;
+
+    }
+
+    .card p{
+
+      color:#ccc;
+      line-height:1.8;
+
+    }
+
+    /* ===================================
+       CONTACT SECTION
+    =================================== */
+
+    .contact-section{
+
+      background:
+      linear-gradient(
+        145deg,
+        #0c121b,
+        #111822
+      );
+
+    }
+
+    .contact-box{
+
+      max-width:900px;
+
+      margin:auto;
+
+      background:
+      linear-gradient(
+        145deg,
+        rgba(28,38,52,0.96),
+        rgba(16,22,32,0.96)
+      );
+
+      padding:60px;
+
+      border-radius:30px;
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      text-align:center;
+
+    }
+
+    .contact-box h2{
+
+      font-size:52px;
+
+      margin-bottom:20px;
+
+    }
+
+    .contact-box h2 span{
+      color:#00d9ff;
+    }
+
+    .contact-box p{
+
+      color:#ccc;
+
+      font-size:17px;
+
+      line-height:1.9;
+
+      margin-bottom:25px;
+
+    }
+
+    .contact-info h3{
+
+      margin-bottom:15px;
+
+      font-size:26px;
+
+      color:#00d9ff;
+
+    }
+
+    .contact-info p{
+
+      margin-bottom:12px;
+
+    }
+
+    .contact-info i{
+
+      color:#00d9ff;
+
+      margin-right:10px;
+
+    }
+
+    /* ===================================
+       FOOTER
+    =================================== */
+
+    footer{
+
+      background:
+      linear-gradient(
+        to right,
+        #05080d,
+        #091018
+      );
+
+      padding:40px 10%;
+
+      text-align:center;
+
+      border-top:1px solid rgba(255,255,255,0.08);
+
+    }
+
+    footer p{
+
+      color:#aaa;
+
+      letter-spacing:0.5px;
+
+    }
+
+    /* ===================================
+       MOBILE
+    =================================== */
+
+    @media(max-width:768px){
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero-content h1{
+        font-size:46px;
+      }
+
+      .mechanics-content h2,
+      .contact-box h2{
+        font-size:38px;
+      }
+
+      .hero-content p,
+      .mechanics-content p{
+        font-size:15px;
+      }
+
+      .nav-btn{
+        width:54px;
+        height:54px;
+      }
+
+      .contact-box{
+        padding:35px 25px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+   <section class="hero">
+
+    <div class="slider">
+
+      <div class="slide active">
+
+        <img src="./ALw1.jpg" alt="Factory">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+          <h1>
+            Driven By
+            <span>Performance</span>
+          </h1>
+
+          <p>
+            AMB Motors delivers professional Ashok Leyland
+            commercial vehicle servicing with trusted workshop expertise.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Explore Services</a>
+            <a href="#" class="btn btn-secondary">Contact Us</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="slide">
+
+        <img src="./AL11.jpg" alt="Inspection">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+          <h1>
+            Advanced
+            <span>Workshop</span>
+          </h1>
+
+          <p>
+            Complete diagnostics, maintenance, and repair solutions
+            for heavy-duty commercial vehicles.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Book Service</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="slide">
+
+        <img src="./alw22.jpg" alt="Vehicles">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+          <h1>
+            Genuine
+            <span>Spare Parts</span>
+          </h1>
+
+          <p>
+            High-quality Ashok Leyland genuine spare parts
+            with warranty-backed reliability and performance.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">View Parts</a>
+            <a href="#" class="btn btn-secondary">Get Quote</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="slide">
+
+        <img src="./AL2.jpg" alt="Truck">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+          <h1>
+            Heavy Duty
+            <span>Solutions</span>
+          </h1>
+
+          <p>
+            End-to-end support for commercial vehicles
+            with trusted service and professional care.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Our Services</a>
+            <a href="#" class="btn btn-secondary">Call Now</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <button class="nav-btn prev">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <button class="nav-btn next">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- DOTS -->
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+  </section>
+
+
+  <!-- LEYPARTS SECTION -->
+
+  <section class="section">
+
+    <div class="mechanics-container leyparts-layout">
+
+      <div class="mechanics-image">
+
+        <img src="./leyparts-banner.png" alt="Leyparts">
+
+      </div>
+
+      <div class="mechanics-content">
+
+        <span class="tag">
+          Ashok Leyland Leyparts
+        </span>
+
+        <h2>
+          Genuine <span>Leyparts</span>
+          For Heavy Duty Performance
+        </h2>
+
+        <p>
+          AMB Motors supplies genuine Ashok Leyland Leyparts
+          engineered for durability, reliability, safety,
+          and superior heavy commercial vehicle performance.
+        </p>
+
+        <div class="feature-box">
+
+          <h3>✔ 100% Genuine Spare Parts</h3>
+
+          <p>
+            Original Leyparts ensuring perfect fitment
+            and long-lasting performance.
+          </p>
+
+        </div>
+
+        <div class="feature-box">
+
+          <h3>✔ Warranty Assured</h3>
+
+          <p>
+            Genuine spare parts supported with trusted
+            Ashok Leyland warranty standards.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WORKSHOP SECTION -->
+
+  <section class="section">
+
+    <div class="mechanics-container about-layout">
+
+      <div class="mechanics-content">
+
+        <span class="tag">
+          AMB Motors Workshop
+        </span>
+
+        <h2>
+          Professional Commercial
+          Vehicle <span>Workshop</span>
+        </h2>
+
+        <p>
+          AMB Motors specializes in Ashok Leyland trucks,
+          buses, and heavy-duty commercial vehicle servicing
+          with advanced workshop facilities and expert technicians.
+        </p>
+
+        <div class="feature-box">
+
+          <h3>✔ Complete Vehicle Service</h3>
+
+          <p>
+            Engine diagnostics, suspension repairs,
+            electrical works, and preventive maintenance.
+          </p>
+
+        </div>
+        <div class="feature-box">
+
+          <h3>✔ Trusted Workshop Standards</h3>
+
+          <p>
+            Genuine service standards, quality workmanship,
+            and reliable customer support.
+          </p>
+
+        </div>
+
+        <div class="feature-box">
+
+          <h3>✔ Reliable Performance</h3>
+
+          <p>
+            Precision inspection and professional servicing
+            for long-lasting vehicle performance.
+          </p>
+
+        </div>
+   
+
+
+      </div>
+
+      <div class="mechanics-image">
+
+        <img src="./alw3.avif" alt="Workshop">
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MECHANICS SECTION -->
+
+  <section class="section mechanics-section">
+
+    <div class="mechanics-container">
+
+      <div class="mechanics-image">
+
+        <img src="./Trck1.jpg" alt="Mechanics">
+
+      </div>
+
+      <div class="mechanics-content">
+
+        <span class="tag">
+          AMB Motors Experts
+        </span>
+
+        <h2>
+          Highly Qualified &
+          Experienced <span>Mechanics</span>
+        </h2>
+
+        <p>
+          Our workshop is powered by highly trained mechanics
+          specialized in Ashok Leyland commercial vehicles.
+        </p>
+
+        <div class="feature-box">
+
+          <h3>✔ Advanced Diagnostics</h3>
+
+          <p>
+            Modern tools and technology for accurate fault detection.
+          </p>
+
+        </div>
+
+
+       <div class="feature-box">
+
+          <h3>✔ Certified Experts</h3>
+
+          <p>
+            Experienced technicians with heavy vehicle expertise.
+          </p>
+
+        </div>
+
+        <div class="feature-box">
+
+          <h3>✔ Quick Service</h3>
+
+          <p>
+            Fast turnaround time with premium quality workmanship.
+          </p>
+
+        </div>
+
+    </div>
+
+  </section>
+
+<!-- GENUINE SPARE PARTS -->
+
+  <section class="section services">
+
+    <div class="section-title">
+
+      <h2>
+        Genuine Ashok Leyland
+        <span>Spare Parts</span>
+      </h2>
+
+      <p>
+        High-quality genuine spare parts ensuring durability,
+        warranty protection, and maximum vehicle performance.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <div class="card">
+
+        <i class="fa-solid fa-gears"></i>
+
+        <h3>Genuine Components</h3>
+
+        <p>
+          Original Ashok Leyland spare parts designed
+          for long-lasting reliability and performance.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h3>Warranty Support</h3>
+
+        <p>
+          Warranty-backed spare parts and authorised
+          installation support.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fa-solid fa-truck-fast"></i>
+
+        <h3>Fast Availability</h3>
+
+        <p>
+          Quick spare parts availability to reduce
+          downtime and delays.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fa-solid fa-award"></i>
+
+        <h3>Authorised Service</h3>
+
+        <p>
+          Trusted authorised service center
+          maintaining premium standards.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="section services">
+
+    <div class="section-title">
+
+      <h2>
+        Our <span>Services</span>
+      </h2>
+
+    </div>
+
+    <div class="service-grid">
+
+      <div class="card">
+
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+        <h3>Vehicle Diagnostics</h3>
+
+        <p>
+          Advanced scanning and diagnostics for accurate fault detection.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fa-solid fa-gears"></i>
+
+        <h3>Engine Repairs</h3>
+
+        <p>
+          Professional engine repair solutions for heavy-duty vehicles.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fa-solid fa-truck"></i>
+
+        <h3>Fleet Maintenance</h3>
+
+        <p>
+          Reliable servicing to reduce downtime and improve efficiency.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <h3>24/7 Support</h3>
+
+        <p>
+          Quick roadside support and emergency assistance.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fa-solid fa-bed"></i>
+
+        <h3>Driver Rest Rooms</h3>
+
+        <p>
+          Clean and comfortable resting rooms for drivers and clients.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT SECTION -->
+
+  <section class="section contact-section">
+
+    <div class="contact-box">
+
+      <h2>
+        Reach <span>Us</span>
+      </h2>
+
+      <p>
+        AMB Motors is an Ashok Leyland authorised service center
+        delivering trusted commercial vehicle maintenance,
+        diagnostics, repairs, genuine spare parts,
+        and warranty-backed service support.
+      </p>
+
+      <div class="contact-info">
+
+        <h3>Contact Information</h3>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          +91 8978972940
+        </p>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          AMB Motors, Ammacheruvu Mitta,
+          Madanapalle, Andhra Pradesh
+        </p>
+
+      </div>
+
+      <br>
+
+      <a href="tel:8978972940" class="btn btn-primary">
+        Call Now
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 AMB Motors | Ashok Leyland Authorised Service Center
+    </p>
+
+  </footer>
+
+  <!-- SLIDER SCRIPT -->
+
+  <script>
+
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+
+    let current = 0;
+
+    function showSlide(index){
+
+      slides.forEach((slide)=>{
+        slide.classList.remove("active");
+      });
+
+      dots.forEach((dot)=>{
+        dot.classList.remove("active");
+      });
+
+      slides[index].classList.add("active");
+      dots[index].classList.add("active");
+
+    }
+
+    document.querySelector(".next").addEventListener("click", ()=>{
+
+      current++;
+
+      if(current >= slides.length){
+        current = 0;
+      }
+
+      showSlide(current);
+
+    });
+
+    document.querySelector(".prev").addEventListener("click", ()=>{
+
+      current--;
+
+      if(current < 0){
+        current = slides.length - 1;
+      }
+
+      showSlide(current);
+
+    });
+
+    setInterval(()=>{
+
+      current++;
+
+      if(current >= slides.length){
+        current = 0;
+      }
+
+      showSlide(current);
+
+    },5000);
+
+  </script>
+
+</body>
+</html>
