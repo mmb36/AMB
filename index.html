@@ -6,7 +6,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AMB Motors | Ashok Leyland Authorised Service Center</title>
+<!-- SEO META TAGS -->
+
+<title>
+AMB Motors | Best Ashok Leyland Service Center in Madanapalle
+</title>
+
+<meta name="description"
+content="AMB Motors is a professional Ashok Leyland authorised service center and commercial vehicle workshop in Madanapalle offering truck repairs, diagnostics, spare parts, and heavy vehicle maintenance.">
+
+<meta name="keywords"
+content="
+AMB Motors,
+Ashok Leyland service center,
+Best mechanic shop in Madanapalle,
+Best workshop in Madanapalle,
+Truck repair workshop,
+Commercial vehicle service center,
+Ashok Leyland workshop,
+Heavy vehicle mechanics,
+Ashok Leyland spare parts,
+Truck diagnostics,
+Leyparts,
+Truck workshop near me,
+Best service center,
+Vehicle maintenance,
+Ashok Leyland mechanics
+">
+
+<meta name="author" content="AMB Motors">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title"
+content="AMB Motors | Ashok Leyland Authorised Service Center">
+
+<meta property="og:description"
+content="Professional Ashok Leyland commercial vehicle workshop and spare parts center in Madanapalle.">
+
+<meta property="og:type" content="website">
+
+<meta property="og:image" content="./logo.png">
+
+<meta property="og:url" content="https://ambmotors.in">
+
+<meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="./logo.png">
 
  <link rel="apple-touch-icon" href="./logo.png">
@@ -1079,6 +1123,25 @@ top:110px;
 
 }
 
+/* ===================================
+   REACH WRAPPER
+=================================== */
+
+.reach-wrapper{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:60px;
+
+  flex-wrap:wrap;
+
+  margin-top:35px;
+
+}
 
 /* ===================================
    PREMIUM QR LOCATION DESIGN
@@ -1264,8 +1327,111 @@ top:110px;
   }
 
 }
+/* ===================================
+   WHATSAPP FLOAT BUTTON
+=================================== */
+
+.whatsapp-float{
+
+  position:fixed;
+
+  bottom:25px;
+  right:25px;
+
+  width:68px;
+  height:68px;
+
+  background:#25D366;
+
+  color:#fff;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:34px;
+
+  z-index:99999;
+
+  text-decoration:none;
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,0.35);
+
+  animation:pulseWhatsApp 2s infinite;
+
+}
+
+.whatsapp-float:hover{
+
+  transform:scale(1.08);
+
+}
+
+@keyframes pulseWhatsApp{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.08);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .whatsapp-float{
+
+    width:60px;
+    height:60px;
+
+    font-size:30px;
+
+    bottom:20px;
+    right:20px;
+
+  }
+
+}
 
   </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoRepair",
+  "name":"AMB Motors",
+  "image":"https://ambmotors.in/logo.png",
+  "url":"https://ambmotors.in",
+  "telephone":"+918978972940",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"NH-42, Ammacheruvu Mitta",
+    "addressLocality":"Madanapalle",
+    "addressRegion":"Andhra Pradesh",
+    "postalCode":"517325",
+    "addressCountry":"IN"
+  },
+  "geo":{
+    "@type":"GeoCoordinates",
+    "latitude":"13.588915",
+    "longitude":"78.496462"
+  },
+  "priceRange":"₹₹",
+  "openingHours":"Mo-Sa 08:00-20:00",
+  "sameAs":[
+    "https://maps.app.goo.gl/k2G7FWNfgsSiuuRH7"
+  ]
+}
+</script>
 
 </head>
 
@@ -1781,7 +1947,7 @@ top:110px;
   </section>
 
  
-  <!-- CONTACT SECTION -->
+ <!-- CONTACT SECTION -->
 
 <section class="section contact-section">
 
@@ -1800,51 +1966,78 @@ top:110px;
 
     <div class="reach-wrapper">
 
+      <!-- LEFT SIDE -->
+
       <div class="contact-info">
 
-        <h3>Contact Information</h3>
+        <h3>
+          Contact Information
+        </h3>
 
-        <p>
+        <p class="contact-item">
           <i class="fa-solid fa-phone"></i>
           +91 8978972940
         </p>
-    <br>
 
-    <a href="tel:8978972940" class="btn btn-primary">
-      Call Now
-    </a>
-<br>
-
-        <p>
+        <p class="contact-item location-text">
           <i class="fa-solid fa-location-dot"></i>
-          AMB Motors,
-          NH-42,Ammacheruvu Mitta,
-          Madanapalle-517325,
+
+          AMB Motors,<br>
+          NH-42, Ammacheruvu Mitta,<br>
+          Madanapalle - 517325,<br>
           Andhra Pradesh
         </p>
 
+        <div class="contact-buttons">
+
+          <a href="tel:8978972940"
+          class="btn btn-primary">
+
+            <i class="fa-solid fa-phone"></i>
+            Call Now
+
+          </a>
+
+        </div>
+
       </div>
 
-   <div class="qr-box">
+      <!-- RIGHT SIDE -->
 
-  <div class="scan-glow">
+      <div class="qr-box">
 
-    <img src="./Location-express-qr-code.png" alt="Location QR">
+        <div class="scan-glow">
 
-    <div class="scan-line"></div>
+          <img src="./Location-express-qr-code.png"
+          alt="AMB Motors Google Maps QR">
 
-  </div>
+          <div class="scan-line"></div>
 
-  <div class="scan-text">
+        </div>
 
-    <h4>
-      <i class="fa-solid fa-location-dot"></i>
-      Scan For Live Location
-    </h4>
-   
-  </div>
+        <div class="scan-text">
 
-</div>
+          <h4>
+            <i class="fa-brands fa-google"></i>
+            Scan For Google Maps Directions
+          </h4>
+
+          <p>
+            Scan QR Code To Instantly Navigate To AMB Motors
+          </p>
+
+          <a href="https://maps.app.goo.gl/k2G7FWNfgsSiuuRH7"
+          target="_blank"
+          class="btn btn-primary maps-btn">
+
+            <i class="fa-solid fa-location-arrow"></i>
+            Open In Google Maps
+
+          </a>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -1923,6 +2116,15 @@ top:110px;
     },5000);
 
   </script>
+<!-- WHATSAPP BUTTON -->
+
+<a href="https://wa.me/918978972940"
+class="whatsapp-float"
+target="_blank">
+
+  <i class="fa-brands fa-whatsapp"></i>
+
+</a>
 
 </body>
 </html>
