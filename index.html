@@ -1079,6 +1079,192 @@ top:110px;
 
 }
 
+
+/* ===================================
+   PREMIUM QR LOCATION DESIGN
+=================================== */
+
+.qr-box{
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  gap:18px;
+
+}
+
+.scan-glow{
+
+  position:relative;
+
+  padding:14px;
+
+  border-radius:24px;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(0,191,255,0.18),
+    rgba(0,134,176,0.12)
+  );
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  overflow:hidden;
+
+  animation:floatQR 3.5s ease-in-out infinite;
+
+  box-shadow:
+  0 0 25px rgba(0,191,255,0.18),
+  0 15px 40px rgba(0,0,0,0.45);
+
+}
+
+.scan-glow img{
+
+  width:190px;
+  height:190px;
+
+  object-fit:contain;
+
+  background:#fff;
+
+  padding:12px;
+
+  border-radius:18px;
+
+  display:block;
+
+}
+
+/* Animated Scanner Line */
+
+.scan-line{
+
+  position:absolute;
+
+  left:12px;
+  right:12px;
+
+  height:4px;
+
+  border-radius:10px;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent,
+    #00d9ff,
+    transparent
+  );
+
+  box-shadow:
+  0 0 15px #00d9ff;
+
+  animation:scanMove 2.8s linear infinite;
+
+}
+
+/* Text */
+
+.scan-text{
+
+  text-align:center;
+
+}
+
+.scan-text h4{
+
+  font-size:22px;
+
+  color:#00d9ff;
+
+  margin-bottom:8px;
+
+  font-weight:700;
+
+  letter-spacing:0.5px;
+
+}
+
+.scan-text h4 i{
+
+  margin-right:8px;
+
+}
+
+.scan-text p{
+
+  color:#d8d8d8;
+
+  font-size:14px;
+
+  letter-spacing:0.4px;
+
+}
+
+/* Floating Animation */
+
+@keyframes floatQR{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* Scan Animation */
+
+@keyframes scanMove{
+
+  0%{
+    top:15px;
+    opacity:0;
+  }
+
+  10%{
+    opacity:1;
+  }
+
+  50%{
+    opacity:1;
+  }
+
+  100%{
+    top:92%;
+    opacity:0;
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .scan-glow img{
+
+    width:160px;
+    height:160px;
+
+  }
+
+  .scan-text h4{
+
+    font-size:18px;
+
+  }
+
+}
+
   </style>
 
 </head>
@@ -1622,6 +1808,12 @@ top:110px;
           <i class="fa-solid fa-phone"></i>
           +91 8978972940
         </p>
+    <br>
+
+    <a href="tel:8978972940" class="btn btn-primary">
+      Call Now
+    </a>
+<br>
 
         <p>
           <i class="fa-solid fa-location-dot"></i>
@@ -1633,23 +1825,28 @@ top:110px;
 
       </div>
 
-      <div class="qr-box">
+   <div class="qr-box">
 
-        <img src="./Location-express-qr-code.png" alt="Location QR">
+  <div class="scan-glow">
 
-        <p>
-          Scan For Exact Location
-        </p>
+    <img src="./Location-express-qr-code.png" alt="Location QR">
 
-      </div>
+    <div class="scan-line"></div>
+
+  </div>
+
+  <div class="scan-text">
+
+    <h4>
+      <i class="fa-solid fa-location-dot"></i>
+      Scan For Live Location
+    </h4>
+   
+  </div>
+
+</div>
 
     </div>
-
-    <br>
-
-    <a href="tel:8978972940" class="btn btn-primary">
-      Call Now
-    </a>
 
   </div>
 
