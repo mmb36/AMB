@@ -1,2517 +1,1097 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2SWSN2E739"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2SWSN2E739');
-</script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- SEO META TAGS -->
-
-<title>
-AMB Motors | Best Ashok Leyland Service Center in Madanapalle
-</title>
-
-<meta name="description"
-content="AMB Motors is a professional Ashok Leyland authorised service center and commercial vehicle workshop in Madanapalle offering truck repairs, diagnostics, spare parts, and heavy vehicle maintenance.">
-
-<meta name="keywords"
-content="
-AMB Motors,
-Ashok Leyland service center,
-Best mechanic shop in Madanapalle,
-Best workshop in Madanapalle,
-Truck repair workshop,
-Commercial vehicle service center,
-Ashok Leyland workshop,
-Heavy vehicle mechanics,
-Ashok Leyland spare parts,
-Truck diagnostics,
-Leyparts,
-Truck workshop near me,
-Best service center,
-Vehicle maintenance,
-Ashok Leyland mechanics
-">
-
-<meta name="author" content="AMB Motors">
-
-<meta name="robots" content="index, follow">
-
-<meta property="og:title"
-content="AMB Motors | Ashok Leyland Authorised Service Center">
-
-<meta property="og:description"
-content="Professional Ashok Leyland commercial vehicle workshop and spare parts center in Madanapalle.">
-
-<meta property="og:type" content="website">
-
-<meta property="og:image" content="./logo.png">
-
-<meta property="og:url" content="https://ambmotors.in">
-
-<meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="./logo.png">
-
- <link rel="apple-touch-icon" href="./logo.png">
-
-  <meta name="theme-color" content="#00bfff">
-
-  <!-- GOOGLE FONT -->
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-  rel="stylesheet">
-
-  <!-- FONT AWESOME -->
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-
-      background:
-      radial-gradient(circle at top right,#00384a 0%,#0b1118 35%),
-      linear-gradient(to bottom,#091018,#0b1118);
-
-      color:#fff;
-      overflow-x:hidden;
-
-    }
-
-    :root{
-
-      --primary:#00bfff;
-      --secondary:#0086b0;
-      --dark:#0b1118;
-      --card:#182230;
-      --text:#d1d1d1;
-
-    }
-
-    /* ===================================
-       HEADER
-    =================================== */
-
-    header{
-
-      width:100%;
-      position:fixed;
-      top:0;
-      left:0;
-      z-index:1000;
-
-      background:rgba(5,10,18,0.85);
-      backdrop-filter:blur(14px);
-
-      border-bottom:1px solid rgba(255,255,255,0.08);
-
-      box-shadow:0 5px 20px rgba(0,0,0,0.25);
-
-    }
-
-    .navbar{
-
-      width:90%;
-      margin:auto;
-
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-
-      padding:18px 0;
-
-    }
-
-    .logo{
-
-      font-size:38px;
-      font-weight:800;
-      text-transform:uppercase;
-      color:#fff;
-
-    }
-
-    .logo span{
-      color:var(--primary);
-    }
-
-    .nav-links{
-
-      display:flex;
-      gap:35px;
-
-    }
-
-    .nav-links a{
-
-      text-decoration:none;
-      color:#fff;
-
-      font-size:15px;
-      font-weight:500;
-
-      text-transform:uppercase;
-
-      transition:0.3s;
-
-      position:relative;
-
-    }
-
-    .nav-links a::after{
-
-      content:'';
-      position:absolute;
-
-      left:0;
-      bottom:-6px;
-
-      width:0%;
-      height:2px;
-
-      background:var(--primary);
-
-      transition:0.3s;
-
-    }
-
-    .nav-links a:hover::after{
-      width:100%;
-    }
-
-    .nav-links a:hover{
-      color:var(--primary);
-    }
-
-    /* ===================================
-       HERO SECTION
-    =================================== */
-
-    .hero{
-
-      width:100%;
-      height:100vh;
-
-      position:relative;
-      overflow:hidden;
-
-    }
-
-    .slider{
-
-      width:100%;
-      height:100%;
-
-      position:relative;
-
-    }
-
-    .slide{
-
-      position:absolute;
-
-      width:100%;
-      height:100%;
-
-      opacity:0;
-
-      transition:1s ease-in-out;
-
-    }
-
-    .slide.active{
-
-      opacity:1;
-      z-index:1;
-
-    }
-
-    .slide img{
-
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-
-      animation:zoomEffect 8s linear infinite;
-
-    }
-
-    @keyframes zoomEffect{
-
-      0%{
-        transform:scale(1.05);
-      }
-
-      100%{
-        transform:scale(1.12);
-      }
-
-    }
-
-    .overlay{
-
-      position:absolute;
-      inset:0;
-
-      background:
-      linear-gradient(
-        to right,
-        rgba(0,0,0,0.85),
-        rgba(0,0,0,0.35)
-      );
-
-    }
-
-    .hero-content{
-
-      position:absolute;
-
-      top:50%;
-      left:8%;
-
-      transform:translateY(-50%);
-
-      z-index:5;
-
-      max-width:720px;
-
-    }
-
-    .hero-content h1{
-
-      font-size:82px;
-      line-height:1.05;
-
-      margin-bottom:20px;
-
-      font-weight:800;
-
-      text-transform:uppercase;
-
-      text-shadow:0 10px 30px rgba(0,0,0,0.45);
-
-    }
-
-    .hero-content h1 span{
-      color:var(--primary);
-    }
-
-    .hero-content p{
-
-      font-size:20px;
-      line-height:1.9;
-
-      color:#ddd;
-
-      margin-bottom:35px;
-
-      max-width:620px;
-
-    }
-
-    .hero-buttons{
-
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-
-    }
-
-    .btn{
-
-      display:inline-block;
-
-      padding:15px 35px;
-
-      border-radius:50px;
-
-      text-decoration:none;
-
-      font-weight:600;
-
-      transition:0.4s;
-
-    }
-
-    .btn-primary{
-
-      background:linear-gradient(
-        135deg,
-        #00bfff,
-        #0086b0
-      );
-
-      color:#fff;
-
-      box-shadow:
-      0 12px 30px rgba(0,191,255,0.35);
-
-    }
-
-    .btn-primary:hover{
-
-      transform:translateY(-6px);
-
-    }
-
-    .btn-secondary{
-
-      border:2px solid rgba(255,255,255,0.5);
-
-      color:#fff;
-
-    }
-
-    .btn-secondary:hover{
-
-      background:#fff;
-      color:#000;
-
-      transform:translateY(-6px);
-
-    }
-
-    /* ===================================
-       HERO NAVIGATION
-    =================================== */
-
-    .nav-btn{
-
-      position:absolute;
-
-      top:50%;
-      transform:translateY(-50%);
-
-      width:70px;
-      height:70px;
-
-      border-radius:50%;
-      border:none;
-
-      background:rgba(255,255,255,0.08);
-
-      border:1px solid rgba(255,255,255,0.12);
-
-      backdrop-filter:blur(12px);
-
-      color:#fff;
-      font-size:24px;
-
-      cursor:pointer;
-
-      z-index:10;
-
-      transition:0.4s;
-
-    }
-
-    .nav-btn:hover{
-
-      background:linear-gradient(
-        135deg,
-        #00bfff,
-        #0086b0
-      );
-
-      transform:translateY(-50%) scale(1.08);
-
-    }
-
-    .prev{
-      left:30px;
-    }
-
-    .next{
-      right:30px;
-    }
-
-    /* ===================================
-       DOTS
-    =================================== */
-
-    .dots{
-
-      position:absolute;
-
-      bottom:35px;
-      left:50%;
-
-      transform:translateX(-50%);
-
-      display:flex;
-      gap:12px;
-
-      z-index:10;
-
-    }
-
-    .dot{
-
-      width:15px;
-      height:15px;
-
-      border-radius:50%;
-
-      border:2px solid rgba(255,255,255,0.5);
-
-      background:transparent;
-
-      cursor:pointer;
-
-      transition:0.3s;
-
-    }
-
-    .dot.active{
-
-      background:#00d9ff;
-
-      box-shadow:0 0 15px rgba(0,217,255,0.75);
-
-    }
-
-    /* ===================================
-       COMMON SECTION
-    =================================== */
-
-    .section{
-
-      padding:110px 10%;
-      position:relative;
-
-    }
-
-    .mechanics-container{
-
-      display:grid;
-
-      grid-template-columns:
-      repeat(auto-fit,minmax(320px,1fr));
-
-      gap:70px;
-
-      align-items:center;
-
-    }
-
-    .mechanics-image{
-
-      position:relative;
-
-    }
-
-    .mechanics-image::before{
-
-      content:'';
-
-      position:absolute;
-
-      inset:-12px;
-
-      border-radius:30px;
-
-      background:linear-gradient(
-        135deg,
-        rgba(0,217,255,0.25),
-        transparent,
-        rgba(0,166,214,0.18)
-      );
-
-      z-index:-1;
-
-    }
-
-    .mechanics-image img{
-
-      width:100%;
-
-      border-radius:28px;
-
-      border:1px solid rgba(255,255,255,0.08);
-
-      box-shadow:
-      0 25px 60px rgba(0,0,0,0.45),
-      0 0 40px rgba(0,166,214,0.08);
-
-      transition:0.5s ease;
-
-    }
-
-    .mechanics-image img:hover{
-
-      transform:scale(1.03);
-
-    }
-
-    .tag{
-
-      display:inline-block;
-
-      padding:10px 18px;
-
-      border-radius:30px;
-
-      background:rgba(0,217,255,0.12);
-
-      border:1px solid rgba(0,217,255,0.15);
-
-      color:#00d9ff;
-
-      margin-bottom:20px;
-
-      font-weight:600;
-
-      text-transform:uppercase;
-
-    }
-
-    .mechanics-content h2{
-
-      font-size:56px;
-      line-height:1.1;
-
-      margin-bottom:30px;
-
-      font-weight:800;
-
-    }
-
-    .mechanics-content h2 span{
-      color:#00d9ff;
-    }
-
-    .mechanics-content p{
-
-      color:var(--text);
-
-      line-height:1.9;
-
-      margin-bottom:25px;
-
-      font-size:17px;
-
-    }
-
-    .feature-box{
-
-      background:
-      linear-gradient(
-        145deg,
-        rgba(28,38,52,0.95),
-        rgba(17,24,34,0.95)
-      );
-
-      padding:24px;
-
-      border-radius:18px;
-
-      margin-bottom:20px;
-
-      border:1px solid rgba(255,255,255,0.05);
-
-      transition:0.3s;
-
-      position:relative;
-      overflow:hidden;
-
-    }
-
-    .feature-box::before{
-
-      content:'';
-
-      position:absolute;
-
-      top:0;
-      left:0;
-
-      width:5px;
-      height:100%;
-
-      background:linear-gradient(
-        to bottom,
-        #00d9ff,
-        #0086b0
-      );
-
-    }
-
-    .feature-box:hover{
-
-      transform:translateY(-8px);
-
-      border-color:#00d9ff;
-
-    }
-
-    .feature-box h3{
-
-      margin-bottom:10px;
-      font-size:22px;
-
-    }
-
-    .feature-box p{
-
-      margin:0;
-      font-size:15px;
-      color:#bbb;
-
-    }
-
-    /* ===================================
-       LEYPARTS SECTION
-    =================================== */
-
-    .leyparts-layout .mechanics-image{
-      order:1;
-    }
-
-    .leyparts-layout .mechanics-content{
-      order:2;
-    }
-
-    /* ===================================
-       ABOUT SECTION
-    =================================== */
-
-    .about-layout .mechanics-content{
-      order:1;
-    }
-
-    .about-layout .mechanics-image{
-      order:2;
-    }
-
-    /* ===================================
-       MECHANICS SECTION
-    =================================== */
-
-    .mechanics-section .mechanics-image{
-      order:1;
-    }
-
-    .mechanics-section .mechanics-content{
-      order:2;
-    }
-
-    /* ===================================
-       SERVICES SECTION
-    =================================== */
-
-    .services{
-
-      background:#0c121b;
-
-    }
-
-    .section-title{
-
-      text-align:center;
-      margin-bottom:60px;
-
-    }
-
-    .section-title h2{
-
-      font-size:48px;
-      margin-bottom:15px;
-
-    }
-
-    .section-title h2 span{
-      color:var(--primary);
-    }
-
-    .service-grid{
-
-      display:grid;
-
-      grid-template-columns:
-      repeat(auto-fit,minmax(250px,1fr));
-
-      gap:30px;
-
-    }
-
-    .card{
-
-      background:
-      linear-gradient(
-        145deg,
-        rgba(28,38,52,0.96),
-        rgba(16,22,32,0.96)
-      );
-
-      padding:35px;
-
-      border-radius:20px;
-
-      border:1px solid rgba(255,255,255,0.05);
-
-      transition:0.4s;
-
-      position:relative;
-      overflow:hidden;
-
-    }
-
-    .card::before{
-
-      content:'';
-
-      position:absolute;
-
-      top:0;
-      left:0;
-
-      width:100%;
-      height:4px;
-
-      background:linear-gradient(
-        to right,
-        #00d9ff,
-        #0086b0
-      );
-
-    }
-
-    .card:hover{
-
-      transform:translateY(-12px);
-
-      border-color:#00d9ff;
-
-    }
-
-    .card i{
-
-      font-size:48px;
-
-      color:#00d9ff;
-
-      margin-bottom:20px;
-
-    }
-
-    .card h3{
-
-      margin-bottom:15px;
-      font-size:26px;
-
-    }
-
-    .card p{
-
-      color:#ccc;
-      line-height:1.8;
-
-    }
-
-    /* ===================================
-       CONTACT SECTION
-    =================================== */
-
-    .contact-section{
-
-      background:
-      linear-gradient(
-        145deg,
-        #0c121b,
-        #111822
-      );
-
-    }
-
-    .contact-box{
-
-      max-width:900px;
-
-      margin:auto;
-
-      background:
-      linear-gradient(
-        145deg,
-        rgba(28,38,52,0.96),
-        rgba(16,22,32,0.96)
-      );
-
-      padding:60px;
-
-      border-radius:30px;
-
-      border:1px solid rgba(255,255,255,0.08);
-
-      text-align:center;
-
-    }
-
-    .contact-box h2{
-
-      font-size:52px;
-
-      margin-bottom:20px;
-
-    }
-
-    .contact-box h2 span{
-      color:#00d9ff;
-    }
-
-    .contact-box p{
-
-      color:#ccc;
-
-      font-size:17px;
-
-      line-height:1.9;
-
-      margin-bottom:25px;
-
-    }
-
-    .contact-info h3{
-
-      margin-bottom:15px;
-
-      font-size:26px;
-
-      color:#00d9ff;
-
-    }
-
-    .contact-info p{
-
-      margin-bottom:12px;
-
-    }
-
-    .contact-info i{
-
-      color:#00d9ff;
-
-      margin-right:10px;
-
-    }
-
-    /* ===================================
-       FOOTER
-    =================================== */
-
-    footer{
-
-      background:
-      linear-gradient(
-        to right,
-        #05080d,
-        #091018
-      );
-
-      padding:40px 10%;
-
-      text-align:center;
-
-      border-top:1px solid rgba(255,255,255,0.08);
-
-    }
-
-    footer p{
-
-      color:#aaa;
-
-      letter-spacing:0.5px;
-
-    }
-
-    /* ===================================
-       MOBILE
-    =================================== */
-
-    @media(max-width:768px){
-
-      .nav-links{
-        display:none;
-      }
-
-      .hero-content h1{
-        font-size:46px;
-      }
-
-      .mechanics-content h2,
-      .contact-box h2{
-        font-size:38px;
-      }
-
-      .hero-content p,
-      .mechanics-content p{
-        font-size:15px;
-      }
-
-      .nav-btn{
-        width:54px;
-        height:54px;
-      }
-
-      .contact-box{
-        padding:35px 25px;
-      }
-
-    }
-
-/* ===================================
-   COMING SOON BANNER
-=================================== */
-
-.coming-soon-banner{
-
-  position:fixed;
-
-  top:110px;
-  right:7%;
-
-  z-index:9999;
-
-  padding:22px 34px;
-
-  border-radius:24px;
-
-  background:
-  linear-gradient(
-    135deg,
-    rgba(0,191,255,0.16),
-    rgba(0,134,176,0.18)
-  );
-
-  border:1px solid rgba(255,255,255,0.18);
-
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-
-  box-shadow:
-  0 15px 45px rgba(0,0,0,0.45),
-  0 0 40px rgba(0,191,255,0.15);
-
-  overflow:hidden;
-
-  animation:floatBanner 4s ease-in-out infinite;
-
- 
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>AMB Motors – Authorised Ashok Leyland Service Centre | Madanapalle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --alb:#016FB6; --albd:#014F82; --albdp:#013660; --albl:#0A8FE0;
+  --alsky:#E8F4FD; --white:#fff; --offwhite:#F5F8FC; --lgray:#EEF3F8;
+  --mgray:#8A9BB0; --dkgray:#1C2B3A; --darker:#0F1A24;
+  --orange:#FF6B00; --yellow:#FFB800; --green:#00A651; --wa:#25D366;
 }
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#fff;color:var(--dkgray);overflow-x:hidden}
 
-.coming-soon-banner::before{
-
-  content:'';
-
-  position:absolute;
-
-top:110px;
-  top:-50%;
-  left:-50%;
-
-  width:220%;
-  height:220%;
-
-  background:
-  linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.12),
-    transparent
-  );
-
-  transform:rotate(25deg);
-
-  animation:shineEffect 5s linear infinite;
-
+/* ── FLOAT BUTTONS ── */
+.float-stack{position:fixed;right:20px;bottom:20px;z-index:9000;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s;position:relative}
+.fab:hover{transform:scale(1.1) translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.35)}
+.fab-wa{background:var(--wa);animation:fabPulse 2.8s ease infinite}
+.fab-wa:hover{animation:none}
+.fab-call{background:var(--alb)}
+.fab svg{width:28px;height:28px;fill:#fff}
+.fab-tip{
+  position:absolute;right:64px;top:50%;transform:translateY(-50%);
+  background:var(--darker);color:#fff;white-space:nowrap;
+  font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:6px 12px;border-radius:7px;pointer-events:none;
+  opacity:0;transition:opacity .2s;
 }
-
-.coming-soon-banner h3{
-
-  position:relative;
-
-  font-size:28px;
-  font-weight:800;
-
-  letter-spacing:1px;
-
-  margin-bottom:6px;
-
-  color:#fff;
-
-  text-transform:uppercase;
-
-}
-
-.coming-soon-banner h3 span{
-
-  color:#00d9ff;
-
-}
-
-.coming-soon-banner p{
-
-  position:relative;
-
-  font-size:14px;
-
-  color:#d7d7d7;
-
-  letter-spacing:0.5px;
-
-}
-
-@keyframes floatBanner{
-
-  0%{
-    transform:translateY(0px);
-  }
-
-  50%{
-    transform:translateY(-10px);
-  }
-
-  100%{
-    transform:translateY(0px);
-  }
-
-}
-
-@keyframes shineEffect{
-
-  0%{
-    transform:translateX(-100%) rotate(25deg);
-  }
-
-  100%{
-    transform:translateX(100%) rotate(25deg);
-  }
-
-}
-
-@media(max-width:768px){
-
-  .coming-soon-banner{
-
-    top:110px;
-    right:20px;
-    left:20px;
-
-    padding:16px 20px;
-
-  }
-
-  .coming-soon-banner h3{
-    font-size:22px;
-  }
-
-}
-
-/* ===================================
-   REACH WRAPPER
-=================================== */
-
-.reach-wrapper{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:flex-start;
-
-  gap:70px;
-
-  margin-top:50px;
-
-}
-
-/* ===================================
-   PREMIUM QR LOCATION DESIGN
-=================================== */
-
-.qr-box{
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-
-  gap:18px;
-
-}
-
-.scan-glow{
-
-  position:relative;
-
-  padding:14px;
-
-  border-radius:24px;
-
-  background:
-  linear-gradient(
-    145deg,
-    rgba(0,191,255,0.18),
-    rgba(0,134,176,0.12)
-  );
-
-  border:1px solid rgba(255,255,255,0.12);
-
-  overflow:hidden;
-
-  animation:floatQR 3.5s ease-in-out infinite;
-
-  box-shadow:
-  0 0 25px rgba(0,191,255,0.18),
-  0 15px 40px rgba(0,0,0,0.45);
-
-}
-
-.scan-glow img{
-
-  width:165px;
-  height:165px;
-
-  object-fit:contain;
-
-  background:#fff;
-
-  padding:12px;
-
-  border-radius:18px;
-
-  display:block;
-
-}
-
-/* Animated Scanner Line */
-
-.scan-line{
-
-  position:absolute;
-
-  left:12px;
-  right:12px;
-
-  height:4px;
-
-  border-radius:10px;
-
-  background:
-  linear-gradient(
-    to right,
-    transparent,
-    #00d9ff,
-    transparent
-  );
-
-  box-shadow:
-  0 0 15px #00d9ff;
-
-  animation:scanMove 2.8s linear infinite;
-
-}
-
-/* Text */
-
-.scan-text{
-
-  text-align:center;
-
-}
-
-.scan-text h4{
-
-  font-size:22px;
-
-  color:#00d9ff;
-
-  margin-bottom:8px;
-
-  font-weight:700;
-
-  letter-spacing:0.5px;
-
-}
-
-.scan-text h4 i{
-
-  margin-right:8px;
-
-}
-
-.scan-text p{
-
-  color:#d8d8d8;
-
-  font-size:14px;
-
-  letter-spacing:0.4px;
-
-}
-
-/* Floating Animation */
-
-@keyframes floatQR{
-
-  0%{
-    transform:translateY(0px);
-  }
-
-  50%{
-    transform:translateY(-10px);
-  }
-
-  100%{
-    transform:translateY(0px);
-  }
-
-}
-
-/* Scan Animation */
-
-@keyframes scanMove{
-
-  0%{
-    top:15px;
-    opacity:0;
-  }
-
-  10%{
-    opacity:1;
-  }
-
-  50%{
-    opacity:1;
-  }
-
-  100%{
-    top:92%;
-    opacity:0;
-  }
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-  .scan-glow img{
-
-    width:160px;
-    height:160px;
-
-  }
-
-  .scan-text h4{
-
-    font-size:18px;
-
-  }
-
-}
-/* ===================================
-   WHATSAPP FLOAT BUTTON
-=================================== */
-
-.whatsapp-float{
-
-  position:fixed;
-
-  bottom:25px;
-  right:25px;
-
-  width:68px;
-  height:68px;
-
-  background:#25D366;
-
-  color:#fff;
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:34px;
-
-  z-index:99999;
-
-  text-decoration:none;
-
-  box-shadow:
-  0 15px 35px rgba(0,0,0,0.35);
-
-  animation:pulseWhatsApp 2s infinite;
-
-}
-
-.whatsapp-float:hover{
-
-  transform:scale(1.08);
-
-}
-
-@keyframes pulseWhatsApp{
-
-  0%{
-    transform:scale(1);
-  }
-
-  50%{
-    transform:scale(1.08);
-  }
-
-  100%{
-    transform:scale(1);
-  }
-
-}
-
-@media(max-width:768px){
-
-  .whatsapp-float{
-
-    width:60px;
-    height:60px;
-
-    font-size:30px;
-
-    bottom:20px;
-    right:20px;
-
-  }
-
-}
-
-/* =========================================
-   COMPLETE MOBILE RESPONSIVE FIX
-========================================= */
-
-@media screen and (max-width:768px){
-
-  *{
-    max-width:100%;
-  }
-
-  html,
-  body{
-    width:100%;
-    overflow-x:hidden;
-  }
-
-  body{
-    overflow-x:hidden;
-  }
-
-  /* =========================
-     HEADER
-  ========================= */
-
-  .navbar{
-    width:92%;
-    padding:14px 0;
-  }
-
-  .logo{
-    font-size:28px;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  /* =========================
-     HERO SECTION
-  ========================= */
-
-  .hero{
-    height:100vh;
-  }
-
-  .hero-content{
-
-    left:6%;
-    right:6%;
-
-    width:88%;
-    max-width:88%;
-
-    top:55%;
-  }
-
-  .hero-content h1{
-
-    font-size:42px;
-    line-height:1.1;
-
-    word-break:break-word;
-
-    margin-bottom:18px;
-  }
-
-  .hero-content p{
-
-    font-size:15px;
-    line-height:1.7;
-
-    margin-bottom:25px;
-  }
-
-  .hero-buttons{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:14px;
-  }
-
-  .btn{
-
-    width:auto;
-
-    padding:13px 22px;
-
-    font-size:14px;
-  }
-
-  .nav-btn{
-
-    width:48px;
-    height:48px;
-
-    font-size:18px;
-  }
-
-  .prev{
-    left:12px;
-  }
-
-  .next{
-    right:12px;
-  }
-
-  .dots{
-    bottom:20px;
-  }
-
-  /* =========================
-     COMING SOON BANNER
-  ========================= */
-
-  .coming-soon-banner{
-
-    top:88px;
-
-    left:12px;
-    right:12px;
-
-    width:auto;
-
-    padding:14px 16px;
-
-    border-radius:18px;
-  }
-
-  .coming-soon-banner h3{
-
-    font-size:18px;
-    line-height:1.3;
-  }
-
-  .coming-soon-banner p{
-
-    font-size:12px;
-    line-height:1.5;
-  }
-
-  /* =========================
-     COMMON SECTION
-  ========================= */
-
-  .section{
-
-    padding:80px 6%;
-  }
-
-  .mechanics-container{
-
-    grid-template-columns:1fr;
-
-    gap:40px;
-  }
-
-  .mechanics-content,
-  .mechanics-image{
-
-    width:100%;
-  }
-
-  .mechanics-content h2{
-
-    font-size:34px;
-    line-height:1.2;
-
-    word-break:break-word;
-  }
-
-  .mechanics-content p{
-
-    font-size:15px;
-    line-height:1.8;
-  }
-
-  .mechanics-image img{
-
-    width:100%;
-    height:auto;
-  }
-
-  /* =========================
-     FEATURE BOX
-  ========================= */
-
-  .feature-box{
-
-    padding:20px;
-  }
-
-  .feature-box h3{
-
-    font-size:18px;
-    line-height:1.5;
-  }
-
-  .feature-box p{
-
-    font-size:14px;
-  }
-
-  /* =========================
-     SECTION TITLES
-  ========================= */
-
-  .section-title h2{
-
-    font-size:34px;
-    line-height:1.2;
-  }
-
-  .section-title p{
-
-    font-size:15px;
-    line-height:1.8;
-  }
-
-  /* =========================
-     SERVICE CARDS
-  ========================= */
-
-  .service-grid{
-
-    grid-template-columns:1fr;
-
-    gap:22px;
-  }
-
-  .card{
-
-    width:100%;
-
-    padding:28px 22px;
-  }
-
-  .card h3{
-
-    font-size:22px;
-  }
-
-  .card p{
-
-    font-size:14px;
-    line-height:1.7;
-  }
-
-  /* =========================
-     CONTACT SECTION
-  ========================= */
-
-  .contact-box{
-
-    padding:30px 18px;
-
-    border-radius:22px;
-
-    overflow:hidden;
-  }
-
-  .contact-box h2{
-
-    font-size:34px;
-  }
-
-  .reach-wrapper{
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:45px;
-
-    width:100%;
-  }
-
-  .contact-info,
-  .qr-box{
-
-    width:100%;
-  }
-
-  .contact-info{
-
-    text-align:center;
-  }
-
-  .contact-info h3{
-
-    font-size:24px;
-  }
-
-  .contact-info p{
-
-    font-size:14px;
-
-    line-height:1.8;
-  }
-
-  /* =========================
-     QR SECTION
-  ========================= */
-
-  .scan-glow{
-
-    width:100%;
-
-    max-width:230px;
-
-    padding:12px;
-  }
-
-  .scan-glow img{
-
-    width:100%;
-
-    height:auto;
-  }
-
-  .scan-text{
-
-    width:100%;
-  }
-
-  .scan-text h4{
-
-    font-size:18px;
-
-    line-height:1.5;
-  }
-
-  .scan-text p{
-
-    font-size:14px;
-
-    line-height:1.7;
-  }
-
-  .maps-btn{
-
-    width:100%;
-
-    max-width:270px;
-  }
-
-  /* =========================
-     WHATSAPP BUTTON
-  ========================= */
-
-  .whatsapp-float{
-
-    width:58px;
-    height:58px;
-
-    font-size:28px;
-
-    bottom:18px;
-    right:18px;
-  }
-
-  /* =========================
-     FOOTER
-  ========================= */
-
-  footer{
-
-    padding:30px 6%;
-  }
-
-  footer p{
-
-    font-size:13px;
-
-    line-height:1.7;
-  }
-
-}
-
-  </style>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"AutoRepair",
-  "name":"AMB Motors",
-  "image":"https://ambmotors.in/logo.png",
-  "url":"https://ambmotors.in",
-  "telephone":"+918978972940",
-  "address":{
-    "@type":"PostalAddress",
-    "streetAddress":"NH-42, Ammacheruvu Mitta",
-    "addressLocality":"Madanapalle",
-    "addressRegion":"Andhra Pradesh",
-    "postalCode":"517325",
-    "addressCountry":"IN"
-  },
-  "geo":{
-    "@type":"GeoCoordinates",
-    "latitude":"13.588915",
-    "longitude":"78.496462"
-  },
-  "priceRange":"₹₹",
-  "openingHours":"Mo-Sa 08:00-20:00",
-  "sameAs":[
-    "https://maps.app.goo.gl/k2G7FWNfgsSiuuRH7"
-  ]
-}
-</script>
-
+.fab:hover .fab-tip{opacity:1}
+.fab-tip::after{content:'';position:absolute;right:-6px;top:50%;transform:translateY(-50%);border:6px solid transparent;border-left-color:var(--darker);border-right:none}
+@keyframes fabPulse{0%,100%{box-shadow:0 6px 20px rgba(37,211,102,.5)}50%{box-shadow:0 6px 32px rgba(37,211,102,.8),0 0 0 10px rgba(37,211,102,.1)}}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--albdp);padding:8px 48px;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:500;color:rgba(255,255,255,.8);letter-spacing:.02em}
+.topbar a{color:inherit;text-decoration:none;transition:color .2s}
+.topbar a:hover{color:var(--yellow)}
+.topbar-l,.topbar-r{display:flex;gap:20px;align-items:center}
+.tb-sep{width:1px;height:13px;background:rgba(255,255,255,.25)}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:200;background:var(--alb);box-shadow:0 4px 20px rgba(1,79,130,.4);display:flex;align-items:stretch;justify-content:space-between;padding:0 48px}
+.logo-a{display:flex;align-items:center;gap:13px;text-decoration:none;padding:12px 0}
+.logo-circle{width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 0 0 3px rgba(255,255,255,.28)}
+.logo-circle span{font-family:'Teko',sans-serif;font-size:16px;font-weight:700;color:var(--alb)}
+.logo-brand{font-family:'Teko',sans-serif;font-size:21px;font-weight:700;color:#fff;letter-spacing:.06em;line-height:1.1}
+.logo-sub{font-size:9.5px;font-weight:500;color:rgba(255,255,255,.7);letter-spacing:.12em;text-transform:uppercase}
+.nav-ul{display:flex;list-style:none;align-items:stretch}
+.nav-ul a{display:flex;align-items:center;padding:0 14px;font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:3px solid transparent;transition:all .2s}
+.nav-ul a:hover{color:#fff;border-bottom-color:var(--yellow);background:rgba(255,255,255,.08)}
+.nav-cta{background:var(--orange)!important;color:#fff!important;padding:0 20px!important;border-bottom-color:transparent!important;margin:9px 0 9px 10px;border-radius:5px!important;box-shadow:0 3px 14px rgba(255,107,0,.4);transition:background .2s!important}
+.nav-cta:hover{background:#e05e00!important}
+
+/* ══ HERO CAROUSEL ══ */
+.hero{position:relative;width:100%;height:620px;overflow:hidden;background:var(--albdp)}
+.c-track{display:flex;height:100%;transition:transform .8s cubic-bezier(.77,0,.175,1)}
+.cslide{position:relative;min-width:100%;height:100%;overflow:hidden;flex-shrink:0}
+.cslide img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.58);transition:transform 7s ease;will-change:transform}
+.cslide.on img{transform:scale(1.06)}
+.c-ov1{position:absolute;inset:0;background:linear-gradient(108deg,rgba(1,54,96,.92) 0%,rgba(1,79,130,.62) 38%,rgba(1,111,182,.12) 68%,transparent 100%)}
+.c-ov2{position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to top,rgba(1,54,96,.75),transparent)}
+.c-content{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;justify-content:center;padding:0 72px;max-width:720px}
+.c-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--alb);color:#fff;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:14px;width:fit-content}
+.c-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--yellow);animation:dp 2s infinite}
+@keyframes dp{0%,100%{opacity:1}50%{opacity:.3}}
+.c-h1{font-family:'Teko',sans-serif;font-size:clamp(44px,6.5vw,84px);font-weight:700;text-transform:uppercase;line-height:.92;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.5);margin-bottom:12px}
+.c-h1 .yl{color:var(--yellow)}
+.c-p{font-size:15px;font-weight:300;color:rgba(255,255,255,.72);line-height:1.65;max-width:460px;margin-bottom:24px}
+.c-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Carousel controls */
+.c-arr{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:background .2s,border-color .2s}
+.c-arr:hover{background:var(--alb);border-color:var(--alb)}
+.c-arr svg{width:20px;height:20px;fill:#fff}
+.c-arr.p{left:18px}.c-arr.n{right:18px}
+.c-dots{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:9px;align-items:center}
+.cdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);border:1.5px solid rgba(255,255,255,.45);cursor:pointer;transition:all .3s}
+.cdot.on{background:var(--yellow);border-color:var(--yellow);width:26px;border-radius:4px}
+.c-prog{position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,.1);z-index:10}
+.c-bar{height:100%;background:var(--yellow);width:0%;transition:width linear}
+
+/* ── AL BAND ── */
+.al-band{background:var(--darker);padding:16px 48px;display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap}
+.al-logo-t{font-family:'Teko',sans-serif;font-size:21px;font-weight:700;color:#fff;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.alb-pipe{width:1px;height:30px;background:rgba(255,255,255,.15)}
+.al-tag{font-family:'Rajdhani',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 13px;border-radius:100px;color:#fff}
+.al-tag.b{background:var(--alb)}.al-tag.g{background:var(--green)}.al-tag.o{background:var(--orange)}
+.al-band p{font-size:13px;color:rgba(255,255,255,.55);font-weight:300}
+
+/* ── BTNS ── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border:none;cursor:pointer;font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;border-radius:5px;transition:all .22s}
+.btn-w{background:#fff;color:var(--alb);box-shadow:0 4px 18px rgba(0,0,0,.2)}.btn-w:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.3);color:var(--alb)}
+.btn-ow{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}.btn-ow:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-b{background:var(--alb);color:#fff;box-shadow:0 4px 18px rgba(1,111,182,.35)}.btn-b:hover{background:var(--albd);transform:translateY(-2px);color:#fff}
+.btn-g{background:var(--wa);color:#fff;box-shadow:0 4px 14px rgba(37,211,102,.3)}.btn-g:hover{background:#1ebc5a;transform:translateY(-2px)}
+.btn-o{background:var(--orange);color:#fff}.btn-o:hover{background:#e05e00;transform:translateY(-2px)}
+
+/* ── SECTIONS ── */
+section{padding:88px 48px}
+.container{max-width:1260px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--alb);margin-bottom:12px}
+.eyebrow::before{content:'';display:block;width:28px;height:2px;background:var(--alb)}
+.sec-h{font-family:'Teko',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:700;text-transform:uppercase;line-height:1;color:var(--dkgray)}
+.sec-h .bl{color:var(--alb)}.sec-h .or{color:var(--orange)}
+.sec-p{font-size:15px;font-weight:300;color:var(--mgray);line-height:1.75;max-width:560px;margin-top:14px}
+
+/* ── VEHICLE CARD ── */
+.vc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.vc-card{border:1.5px solid var(--lgray);border-radius:14px;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s;background:#fff}
+.vc-card:hover{border-color:var(--alb);box-shadow:0 12px 40px rgba(1,111,182,.1);transform:translateY(-4px)}
+.vc-img-wrap{height:190px;overflow:hidden;position:relative;background:var(--albdp)}
+.vc-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s;filter:brightness(.88)}
+.vc-card:hover .vc-img-wrap img{transform:scale(1.06)}
+.vc-img-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(1,54,96,.65) 0%,transparent 55%)}
+.badge{position:absolute;top:12px;right:12px;z-index:2;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px}
+.badge-y{background:var(--yellow);color:var(--darker)}.badge-g{background:var(--green);color:#fff}.badge-o{background:var(--orange);color:#fff}.badge-v{background:#7B2D8B;color:#fff}.badge-b{background:var(--albd);color:#fff}
+.vc-body{padding:18px}
+.vc-ser{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--alb);margin-bottom:5px}
+.vc-body h3{font-family:'Teko',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;color:var(--dkgray);margin-bottom:10px}
+.vc-specs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px}
+.vc-sp{background:var(--offwhite);border-radius:5px;padding:7px 9px}
+.vc-sp-l{font-size:9.5px;color:var(--mgray);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.vc-sp-v{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;color:var(--dkgray);margin-top:1px}
+.vc-tags{display:flex;flex-wrap:wrap;gap:5px}
+.vc-tag{font-size:10.5px;font-weight:500;color:var(--alb);background:var(--alsky);border-radius:100px;padding:3px 9px}
+
+/* ── SERVICES ── */
+#services{background:var(--offwhite)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+.svc-card{background:#fff;border:1px solid var(--lgray);border-radius:12px;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
+.svc-card:hover{border-color:var(--alb);transform:translateY(-4px);box-shadow:0 12px 40px rgba(1,111,182,.1)}
+.svc-img{height:148px;overflow:hidden;position:relative}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:brightness(.85)}
+.svc-card:hover .svc-img img{transform:scale(1.06)}
+.svc-img-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(1,54,96,.55),transparent 60%)}
+.svc-body{padding:20px 18px}
+.svc-body h3{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--dkgray);margin-bottom:7px}
+.svc-body p{font-size:13px;font-weight:300;color:var(--mgray);line-height:1.65}
+.svc-body::after{content:'';display:block;width:0;height:2px;background:var(--alb);margin-top:14px;transition:width .4s}
+.svc-card:hover .svc-body::after{width:40px}
+
+/* ── SPARE PARTS ── */
+#spares{background:var(--darker);position:relative;overflow:hidden}
+#spares .eyebrow{color:var(--yellow)}
+#spares .eyebrow::before{background:var(--yellow)}
+#spares .sec-h{color:#fff}
+#spares .sec-h .bl{color:#4DB8FF}
+#spares .sec-p{color:rgba(255,255,255,.5)}
+.spares-glow{position:absolute;right:-150px;top:-100px;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(1,111,182,.18),transparent 70%);pointer-events:none}
+.parts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.part-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;transition:background .3s,border-color .3s,transform .3s}
+.part-card:hover{background:rgba(1,111,182,.14);border-color:var(--alb);transform:translateY(-3px)}
+.part-img{height:120px;overflow:hidden;position:relative}
+.part-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:brightness(.7) saturate(.8)}
+.part-card:hover .part-img img{transform:scale(1.08)}
+.part-img-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,26,36,.7),transparent 60%)}
+.part-body{padding:15px}
+.part-body h4{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;margin-bottom:7px}
+.part-body p{font-size:12px;font-weight:300;color:rgba(255,255,255,.44);line-height:1.6;margin-bottom:12px}
+.part-tags{display:flex;flex-wrap:wrap;gap:4px}
+.pt{font-size:10px;font-weight:500;background:rgba(255,255,255,.06);color:rgba(255,255,255,.55);border-radius:4px;padding:2px 7px;border:1px solid rgba(255,255,255,.08)}
+.parts-cta{margin-top:36px;background:linear-gradient(90deg,var(--albd),var(--alb));border-radius:14px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.parts-cta h3{font-family:'Teko',sans-serif;font-size:26px;font-weight:700;color:#fff;text-transform:uppercase}
+.parts-cta p{font-size:13px;color:rgba(255,255,255,.7);margin-top:3px;font-weight:300}
+
+/* ── WHY US ── */
+#why{background:var(--offwhite)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:68px;align-items:center;margin-top:48px}
+.why-pts{display:flex;flex-direction:column;gap:18px}
+.why-pt{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:20px;transition:border-color .25s,box-shadow .25s}
+.why-pt:hover{border-color:var(--alb);box-shadow:0 6px 24px rgba(1,111,182,.08)}
+.why-n{font-family:'Teko',sans-serif;font-size:34px;font-weight:700;color:var(--alb);line-height:1;min-width:36px}
+.why-pt h4{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--dkgray);margin-bottom:5px}
+.why-pt p{font-size:13px;color:var(--mgray);font-weight:300;line-height:1.6}
+.why-cert{background:linear-gradient(135deg,var(--albdp),var(--alb));border-radius:16px;overflow:hidden;position:relative}
+.why-cert-img{width:100%;height:200px;object-fit:cover;filter:brightness(.4) saturate(.6);display:block}
+.why-cert-body{padding:30px;text-align:center;color:#fff}
+.cert-circle{width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-family:'Teko',sans-serif;font-size:24px;font-weight:700;color:#fff;margin:0 auto 16px}
+.cert-yr{font-family:'Teko',sans-serif;font-size:54px;font-weight:700;color:var(--yellow);line-height:1}
+.cert-yr-l{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px}
+.cert-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px}
+.cert-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:5px 13px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+.cert-sg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cstat{background:rgba(255,255,255,.08);border-radius:9px;padding:13px}
+.cstat-n{font-family:'Teko',sans-serif;font-size:28px;font-weight:700;color:var(--yellow);line-height:1}
+.cstat-l{font-size:10px;color:rgba(255,255,255,.45);margin-top:2px;letter-spacing:.06em;text-transform:uppercase}
+
+/* ── GALLERY ── */
+#gallery{background:var(--albdp);padding:80px 48px}
+#gallery .eyebrow{color:var(--yellow)}
+#gallery .eyebrow::before{background:var(--yellow)}
+#gallery .sec-h{color:#fff}
+#gallery .sec-h .bl{color:#4DB8FF}
+#gallery .sec-p{color:rgba(255,255,255,.5)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:210px 210px;gap:12px;margin-top:40px}
+.gal-item{border-radius:10px;overflow:hidden;position:relative;cursor:pointer}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .3s;filter:brightness(.78)}
+.gal-item:hover img{transform:scale(1.08);filter:brightness(.6)}
+.gal-big{grid-column:1/3}
+.gal-tall{grid-row:1/3}
+.gal-cap{position:absolute;bottom:0;left:0;right:0;padding:14px;background:linear-gradient(to top,rgba(1,54,96,.9),transparent);color:#fff;font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.gal-item:hover .gal-cap{opacity:1}
+
+/* ── BOOKING ── */
+#booking{background:#fff}
+.book-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;margin-top:48px;align-items:start}
+.form-box{background:var(--offwhite);border:1px solid var(--lgray);border-radius:16px;padding:34px}
+.form-ttl{font-family:'Teko',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase;color:var(--dkgray);margin-bottom:22px;letter-spacing:.04em}
+.fg-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.fg{display:flex;flex-direction:column;gap:5px}.fg.full{grid-column:1/-1}
+label{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mgray)}
+input,select,textarea{background:#fff;border:1.5px solid var(--lgray);border-radius:7px;padding:10px 13px;font-family:'Inter',sans-serif;font-size:13.5px;color:var(--dkgray);outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
+input::placeholder,textarea::placeholder{color:#BCC6D0}
+input:focus,select:focus,textarea:focus{border-color:var(--alb);box-shadow:0 0 0 3px rgba(1,111,182,.1)}
+select option{background:#fff}
+textarea{resize:vertical;min-height:88px}
+.contact-side{display:flex;flex-direction:column;gap:16px}
+.cp-card{display:flex;gap:14px;align-items:flex-start;background:var(--offwhite);border:1px solid var(--lgray);border-radius:12px;padding:18px}
+.cp-icon{width:42px;height:42px;border-radius:9px;background:var(--alsky);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.cp-card h4{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--alb);margin-bottom:3px}
+.cp-card p,.cp-card a{font-size:13px;color:var(--dkgray);font-weight:400;line-height:1.55;text-decoration:none}
+.cp-card a:hover{color:var(--alb)}
+.hrs-tbl{width:100%;margin-top:5px;border-collapse:collapse}
+.hrs-tbl td{padding:3px 0;font-size:12.5px;color:var(--dkgray)}
+.hrs-tbl td:first-child{color:var(--mgray);font-weight:500;width:110px}
+.map-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:13px;border-radius:10px;background:var(--alb);color:#fff;text-decoration:none;font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(1,111,182,.3);transition:background .2s,transform .2s}
+.map-btn:hover{background:var(--albd);transform:translateY(-2px)}
+.wa-btn-full{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:13px;border-radius:10px;background:var(--wa);color:#fff;text-decoration:none;font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s,transform .2s}
+.wa-btn-full:hover{background:#1ebc5a;transform:translateY(-2px)}
+
+/* ── TESTIMONIALS ── */
+#testimonials{background:var(--offwhite)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.testi-card{background:#fff;border:1px solid var(--lgray);border-radius:14px;padding:26px;position:relative;overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.testi-card:hover{border-color:var(--alb);box-shadow:0 10px 36px rgba(1,111,182,.1)}
+.testi-qm{position:absolute;top:14px;right:18px;font-family:'Teko',sans-serif;font-size:72px;font-weight:700;color:var(--alb);opacity:.06;line-height:1;user-select:none}
+.testi-stars{color:var(--yellow);font-size:13px;margin-bottom:12px;letter-spacing:.1em}
+.testi-txt{font-size:13.5px;font-weight:300;color:#4A5668;line-height:1.75;margin-bottom:18px;font-style:italic}
+.testi-auth{display:flex;align-items:center;gap:11px;padding-top:14px;border-top:1px solid var(--lgray)}
+.testi-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--albd),var(--albl));display:flex;align-items:center;justify-content:center;font-family:'Teko',sans-serif;font-size:15px;font-weight:700;color:#fff;flex-shrink:0}
+.testi-name{font-size:13.5px;font-weight:600;color:var(--dkgray)}
+.testi-role{font-size:11.5px;color:var(--mgray);margin-top:1px}
+
+/* ── FOOTER ── */
+footer{background:var(--albdp);padding:56px 48px 26px}
+.footer-grid{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand p{font-size:12.5px;color:rgba(255,255,255,.42);line-height:1.75;font-weight:300;margin-top:12px}
+.footer-col h5{font-family:'Rajdhani',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:13px;color:rgba(255,255,255,.47);text-decoration:none;font-weight:300;transition:color .2s}
+.footer-col ul a:hover{color:rgba(255,255,255,.9)}
+.footer-bot{max-width:1260px;margin:0 auto;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-bot p{font-size:11.5px;color:rgba(255,255,255,.22)}
+.al-pill{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:100px;padding:5px 14px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+
+/* VEHICLE TABS */
+.vtabs{display:flex;gap:8px;margin:36px 0 26px;border-bottom:2px solid var(--lgray);overflow-x:auto}
+.vtab{font-family:'Rajdhani',sans-serif;font-size:13.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:9px 18px;border:none;background:none;cursor:pointer;color:var(--mgray);border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .2s,border-color .2s;white-space:nowrap}
+.vtab:hover{color:var(--alb)}.vtab.on{color:var(--alb);border-bottom-color:var(--alb)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.4s}
+
+@media(max-width:1024px){.svc-grid,.parts-grid{grid-template-columns:repeat(2,1fr)}.vc-grid{grid-template-columns:repeat(2,1fr)}.why-grid,.book-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr 1fr}.gal-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto}.gal-big,.gal-tall{grid-column:auto;grid-row:auto}}
+@media(max-width:640px){section,#gallery{padding:56px 18px}.topbar,.al-band,footer{padding-left:18px;padding-right:18px}nav{padding:0 16px}.nav-ul{display:none}.svc-grid,.parts-grid,.vc-grid,.testi-grid,.gal-grid{grid-template-columns:1fr}.hero{height:380px}.c-content{padding:0 22px}.c-h1{font-size:36px}.footer-grid{grid-template-columns:1fr}}
+</style>
 </head>
-
 <body>
 
-  <!-- HEADER -->
-
-  <header>
-
-    <div class="navbar">
-
-      <div class="logo">
-        AMB <span>Motors</span>
-      </div>
-
-    </div>
-
-  </header>
-
-   <section class="hero">
-<!-- COMING SOON BANNER -->
-
-<div class="coming-soon-banner">
-
-  <h3>
-    AMB Motors <span>Coming Soon</span>
-  </h3>
-
-  <p>
-     Ashok Leyland Authorised Service Center Launching Soon In Madanapalle
-  </p>
-
+<!-- ══ FLOATING BUTTONS ══ -->
+<div class="float-stack">
+  <a class="fab fab-wa"
+     href="https://wa.me/918978972940?text=Hello%20AMB%20Motors!%20I%20need%20assistance%20with%20my%20Ashok%20Leyland%20vehicle."
+     target="_blank" rel="noopener" aria-label="WhatsApp AMB Motors">
+    <span class="fab-tip">WhatsApp Us</span>
+    <svg viewBox="0 0 32 32"><path d="M16 1C7.73 1 1 7.73 1 16c0 2.65.69 5.14 1.9 7.3L1 31l7.9-1.87C10.9 30.35 13.4 31 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm0 27.3c-2.36 0-4.6-.64-6.54-1.74l-.46-.28-4.69 1.11 1.14-4.56-.3-.47A12.28 12.28 0 0 1 3.7 16C3.7 9.22 9.22 3.7 16 3.7S28.3 9.22 28.3 16 22.78 28.3 16 28.3zm6.73-9.18c-.37-.18-2.18-1.07-2.52-1.2-.33-.12-.58-.18-.82.19-.24.36-.95 1.2-1.17 1.44-.21.25-.43.28-.8.1-.36-.18-1.53-.56-2.91-1.8-1.08-.96-1.8-2.14-2.02-2.5-.2-.36-.02-.56.16-.74l.55-.64c.18-.2.24-.36.37-.61.12-.24.06-.46-.03-.64-.1-.18-.82-1.97-1.12-2.7-.3-.71-.6-.61-.82-.62h-.7c-.24 0-.64.09-.97.46-.34.36-1.28 1.25-1.28 3.06 0 1.8 1.31 3.54 1.5 3.79.18.24 2.58 3.93 6.25 5.51.87.38 1.55.6 2.08.77.87.28 1.67.24 2.3.14.7-.1 2.18-.89 2.49-1.75.3-.86.3-1.6.21-1.75-.08-.14-.32-.23-.69-.41z"/></svg>
+  </a>
+  <a class="fab fab-call" href="tel:+918978972940" aria-label="Call AMB Motors">
+    <span class="fab-tip">+91 89789 72940</span>
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+  </a>
 </div>
 
-    <div class="slider">
-
-      <div class="slide active">
-
-        <img src="./ALw1.jpg" alt="Factory">
-
-        <div class="overlay"></div>
-
-        <div class="hero-content">
-
-          <h1>
-            Driven By
-            <span>Performance</span>
-          </h1>
-
-          <p>
-            AMB Motors delivers professional Ashok Leyland
-            commercial vehicle servicing with trusted workshop expertise.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#" class="btn btn-primary">Explore Services</a>
-            <a href="#" class="btn btn-secondary">Contact Us</a>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="slide">
-
-        <img src="./AL11.jpg" alt="Inspection">
-
-        <div class="overlay"></div>
-
-        <div class="hero-content">
-
-          <h1>
-            Advanced
-            <span>Workshop</span>
-          </h1>
-
-          <p>
-            Complete diagnostics, maintenance, and repair solutions
-            for heavy-duty commercial vehicles.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#" class="btn btn-primary">Book Service</a>
-            <a href="#" class="btn btn-secondary">Learn More</a>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="slide">
-
-        <img src="./alw22.jpg" alt="Vehicles">
-
-        <div class="overlay"></div>
-
-        <div class="hero-content">
-
-          <h1>
-            Genuine
-            <span>Spare Parts</span>
-          </h1>
-
-          <p>
-            High-quality Ashok Leyland genuine spare parts
-            with warranty-backed reliability and performance.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#" class="btn btn-primary">View Parts</a>
-            <a href="#" class="btn btn-secondary">Get Quote</a>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="slide">
-
-        <img src="./AL2.jpg" alt="Truck">
-
-        <div class="overlay"></div>
-
-        <div class="hero-content">
-
-          <h1>
-            Heavy Duty
-            <span>Solutions</span>
-          </h1>
-
-          <p>
-            End-to-end support for commercial vehicles
-            with trusted service and professional care.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#" class="btn btn-primary">Our Services</a>
-            <a href="#" class="btn btn-secondary">Call Now</a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- NAVIGATION -->
-
-    <button class="nav-btn prev">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-
-    <button class="nav-btn next">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <!-- DOTS -->
-
-    <div class="dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-  </section>
-
-
-
-
-  <!-- LEYPARTS SECTION -->
-
-  <section class="section">
-
-    <div class="mechanics-container leyparts-layout">
-
-      <div class="mechanics-image">
-
-        <img src="./leyparts-banner.png" alt="Leyparts">
-
-      </div>
-
-      <div class="mechanics-content">
-
-        <span class="tag">
-          Ashok Leyland Leyparts
-        </span>
-
-        <h2>
-          Genuine <span>Leyparts</span>
-          For Heavy Duty Performance
-        </h2>
-
-        <p>
-          AMB Motors supplies genuine Ashok Leyland Leyparts
-          engineered for durability, reliability, safety,
-          and superior heavy commercial vehicle performance.
-        </p>
-
-        <div class="feature-box">
-
-          <h3>✔ 100% Genuine Spare Parts</h3>
-
-          <p>
-            Original Leyparts ensuring perfect fitment
-            and long-lasting performance.
-          </p>
-
-        </div>
-
-        <div class="feature-box">
-
-          <h3>✔ Warranty Assured</h3>
-
-          <p>
-            Genuine spare parts supported with trusted
-            Ashok Leyland warranty standards.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- WORKSHOP SECTION -->
-
-  <section class="section">
-
-    <div class="mechanics-container about-layout">
-
-      <div class="mechanics-content">
-
-        <span class="tag">
-          AMB Motors Workshop
-        </span>
-
-        <h2>
-          Professional Commercial
-          Vehicle <span>Workshop</span>
-        </h2>
-
-        <p>
-          AMB Motors specializes in Ashok Leyland trucks,
-          buses, and heavy-duty commercial vehicle servicing
-          with advanced workshop facilities and expert technicians.
-        </p>
-
-        <div class="feature-box">
-
-          <h3>✔ Complete Vehicle Service</h3>
-
-          <p>
-            Engine diagnostics, suspension repairs,
-            electrical works, and preventive maintenance.
-          </p>
-
-        </div>
-        <div class="feature-box">
-
-          <h3>✔ Trusted Workshop Standards</h3>
-
-          <p>
-            Genuine service standards, quality workmanship,
-            and reliable customer support.
-          </p>
-
-        </div>
-
-        <div class="feature-box">
-
-          <h3>✔ Reliable Performance</h3>
-
-          <p>
-            Precision inspection and professional servicing
-            for long-lasting vehicle performance.
-          </p>
-
-        </div>
-   
-
-
-      </div>
-
-      <div class="mechanics-image">
-
-        <img src="./alw3.avif" alt="Workshop">
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- MECHANICS SECTION -->
-
-  <section class="section mechanics-section">
-
-    <div class="mechanics-container">
-
-      <div class="mechanics-image">
-
-        <img src="./Trck1.jpg" alt="Mechanics">
-
-      </div>
-
-      <div class="mechanics-content">
-
-        <span class="tag">
-          AMB Motors Experts
-        </span>
-
-        <h2>
-          Highly Qualified &
-          Experienced <span>Mechanics</span>
-        </h2>
-
-        <p>
-          Our workshop is powered by highly trained mechanics
-          specialized in Ashok Leyland commercial vehicles.
-        </p>
-
-        <div class="feature-box">
-
-          <h3>✔ Advanced Diagnostics</h3>
-
-          <p>
-            Modern tools and technology for accurate fault detection.
-          </p>
-
-        </div>
-
-
-       <div class="feature-box">
-
-          <h3>✔ Certified Experts</h3>
-
-          <p>
-            Experienced technicians with heavy vehicle expertise.
-          </p>
-
-        </div>
-
-        <div class="feature-box">
-
-          <h3>✔ Quick Service</h3>
-
-          <p>
-            Fast turnaround time with premium quality workmanship.
-          </p>
-
-        </div>
-
-    </div>
-
-  </section>
-
-<!-- GENUINE SPARE PARTS -->
-
-  <section class="section services">
-
-    <div class="section-title">
-
-      <h2>
-        Genuine Ashok Leyland
-        <span>Spare Parts</span>
-      </h2>
-
-      <p>
-        High-quality genuine spare parts ensuring durability,
-        warranty protection, and maximum vehicle performance.
-      </p>
-
-    </div>
-
-    <div class="service-grid">
-
-      <div class="card">
-
-        <i class="fa-solid fa-gears"></i>
-
-        <h3>Genuine Components</h3>
-
-        <p>
-          Original Ashok Leyland spare parts designed
-          for long-lasting reliability and performance.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <i class="fa-solid fa-shield-halved"></i>
-
-        <h3>Warranty Support</h3>
-
-        <p>
-          Warranty-backed spare parts and authorised
-          installation support.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <i class="fa-solid fa-truck-fast"></i>
-
-        <h3>Fast Availability</h3>
-
-        <p>
-          Quick spare parts availability to reduce
-          downtime and delays.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <i class="fa-solid fa-award"></i>
-
-        <h3>Authorised Service</h3>
-
-        <p>
-          Trusted authorised service center
-          maintaining premium standards.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SERVICES -->
-
-  <section class="section services">
-
-    <div class="section-title">
-
-      <h2>
-        Our <span>Services</span>
-      </h2>
-
-    </div>
-
-    <div class="service-grid">
-
-      <div class="card">
-
-        <i class="fa-solid fa-screwdriver-wrench"></i>
-
-        <h3>Vehicle Diagnostics</h3>
-
-        <p>
-          Advanced scanning and diagnostics for accurate fault detection.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <i class="fa-solid fa-gears"></i>
-
-        <h3>Engine Repairs</h3>
-
-        <p>
-          Professional engine repair solutions for heavy-duty vehicles.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <i class="fa-solid fa-truck"></i>
-
-        <h3>Fleet Maintenance</h3>
-
-        <p>
-          Reliable servicing to reduce downtime and improve efficiency.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <i class="fa-solid fa-headset"></i>
-
-        <h3>24/7 Support</h3>
-
-        <p>
-          Quick roadside support and emergency assistance.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <i class="fa-solid fa-bed"></i>
-
-        <h3>Driver Rest Rooms</h3>
-
-        <p>
-          Clean and comfortable resting rooms for drivers and clients.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
- 
- <!-- CONTACT SECTION -->
-
-<section class="section contact-section">
-
-  <div class="contact-box">
-
-    <h2>
-      Reach <span>Us</span>
-    </h2>
-
-    <p>
-      AMB Motors is an Ashok Leyland authorised service center
-      delivering trusted commercial vehicle maintenance,
-      diagnostics, repairs, genuine spare parts,
-      and warranty-backed service support.
-    </p>
-
-    <div class="reach-wrapper">
-
-      <!-- LEFT SIDE -->
-
-      <div class="contact-info">
-
-        <h3>
-          Contact Information
-        </h3>
-
-        <p class="contact-item">
-          <i class="fa-solid fa-phone"></i>
-          +91 8978972940
-        </p>
-
-        <p class="contact-item location-text">
-          <i class="fa-solid fa-location-dot"></i>
-
-          AMB Motors,<br>
-          NH-42, Ammacheruvu Mitta,<br>
-          Madanapalle - 517325,<br>
-          Andhra Pradesh
-        </p>
-
-        <div class="contact-buttons">
-
-          <a href="tel:8978972940"
-          class="btn btn-primary">
-
-            <i class="fa-solid fa-phone"></i>
-            Call Now
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <!-- RIGHT SIDE -->
-
-      <div class="qr-box">
-
-        <div class="scan-glow">
-
-          <img src="./Location-express-qr-code.png"
-          alt="AMB Motors Google Maps QR">
-
-          <div class="scan-line"></div>
-
-        </div>
-
-        <div class="scan-text">
-
-          <h4>
-            <i class="fa-brands fa-google"></i>
-            Scan For Google Maps Directions
-          </h4>
-
-          <p>
-            Scan QR Code To Instantly Navigate To AMB Motors
-          </p>
-
-         <a href="https://www.google.com/maps/dir/?api=1&destination=13.588915,78.496462"
-target="_blank"
-class="btn btn-primary maps-btn">
-
-  <i class="fa-solid fa-location-arrow"></i>
-  Open In Google Maps
-
-</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
+<!-- ══ TOP BAR ══ -->
+<div class="topbar">
+  <div class="topbar-l">
+    <span>📞 <a href="tel:+918978972940">+91 89789 72940</a></span>
+    <div class="tb-sep"></div>
+    <span>✉ <a href="mailto:service@ambmotors.in">service@ambmotors.in</a></span>
   </div>
+  <div class="topbar-r">
+    <span>⏰ Mon–Sat: 8:00 AM – 7:00 PM</span>
+    <div class="tb-sep"></div>
+    <span>📍 NH-42, Madanapalle – 517325, AP</span>
+  </div>
+</div>
 
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="logo-a" href="#">
+    <div class="logo-circle"><span>AMB</span></div>
+    <div>
+      <div class="logo-brand">AMB Motors</div>
+      <div class="logo-sub">Authorised Ashok Leyland Service</div>
+    </div>
+  </a>
+  <ul class="nav-ul">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#vehicles">Vehicles</a></li>
+    <li><a href="#spares">Spare Parts</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#booking" class="nav-cta">🔧 Book Service</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════
+     HERO CAROUSEL — Real AL Images
+══════════════════════════════ -->
+<div class="hero" id="heroWrap">
+  <div class="c-track" id="cTrack">
+
+    <!-- SLIDE 1 – AVTR Heavy Duty Truck -->
+    <div class="cslide on" id="s0">
+      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/4825-1674193295.webp"
+           alt="Ashok Leyland AVTR 4825 heavy truck"
+           onerror="this.src='https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp'"/>
+      <div class="c-ov1"></div><div class="c-ov2"></div>
+      <div class="c-content">
+        <div class="c-eyebrow"><span class="dot"></span>Ashok Leyland AVTR Series</div>
+        <h1 class="c-h1">INDIA'S<br/><span class="yl">FLAGSHIP</span><br/>HCV TRUCK</h1>
+        <p class="c-p">AVTR — Advanced Versatile Truck Range. 280 to 480 HP. Fully serviced by our AL-certified expert team on NH-42, Madanapalle.</p>
+        <div class="c-btns">
+          <a href="#booking" class="btn btn-w">🔧 Book Service</a>
+          <a href="tel:+918978972940" class="btn btn-ow">📞 Call Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 – BOSS 1415 HB Truck -->
+    <div class="cslide" id="s1">
+      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/boss-1415-hb-1614071349.webp"
+           alt="Ashok Leyland BOSS 1415 HB truck"/>
+      <div class="c-ov1"></div><div class="c-ov2"></div>
+      <div class="c-content">
+        <div class="c-eyebrow"><span class="dot"></span>BOSS · CAPTAIN · ECOMET</div>
+        <h1 class="c-h1">BOSS OF<br/><span class="yl">INDIAN</span><br/>HIGHWAYS</h1>
+        <p class="c-p">10T to 25T workhorses for construction, mining & long haul. Expert Neptune engine service and genuine parts always in stock at AMB Motors.</p>
+        <div class="c-btns">
+          <a href="#vehicles" class="btn btn-w">View Models →</a>
+          <a href="#spares" class="btn btn-ow">🔩 Spare Parts</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 – AVTR 1920 HG (different variant) -->
+    <div class="cslide" id="s2">
+      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp"
+           alt="Ashok Leyland AVTR 1920 HG truck"/>
+      <div class="c-ov1"></div><div class="c-ov2"></div>
+      <div class="c-content">
+        <div class="c-eyebrow"><span class="dot"></span>AVTR 1920 · Long Haul</div>
+        <h1 class="c-h1">BUILT FOR<br/><span class="yl">EVERY</span><br/>MISSION</h1>
+        <p class="c-p">Millions of configurations on a single modular platform. From rigid trucks to tippers and tractor-trailers — serviced with 100% genuine AL parts.</p>
+        <div class="c-btns">
+          <a href="#booking" class="btn btn-w">Book Service →</a>
+          <a href="tel:+918978972940" class="btn btn-ow">📞 Call Us</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 – TAURUS 3532 Tipper -->
+    <div class="cslide" id="s3">
+      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/taurus-3532-1769146071.webp"
+           alt="Ashok Leyland TAURUS 3532 tipper"/>
+      <div class="c-ov1"></div><div class="c-ov2"></div>
+      <div class="c-content">
+        <div class="c-eyebrow"><span class="dot"></span>NEW 2026 — TAURUS · High-HP Tipper Range</div>
+        <h1 class="c-h1">LEGENDARY<br/><span class="yl">TAURUS</span><br/>REBORN</h1>
+        <p class="c-p">Powering last-mile delivery across Chittoor, Kurnool & Madanapalle. Fast service, CNG & BS6 expertise, same-day parts availability.</p>
+        <div class="c-btns">
+          <a href="#booking" class="btn btn-w">Book Service →</a>
+          <a href="#spares" class="btn btn-ow">🔩 Spare Parts</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 – Ecomet Truck (service centre context) -->
+    <div class="cslide" id="s4">
+      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1920-hf-1671102506.webp"
+           alt="Ashok Leyland 1920 HF truck at service centre"/>
+      <div class="c-ov1"></div><div class="c-ov2"></div>
+      <div class="c-content">
+        <div class="c-eyebrow"><span class="dot"></span>Authorised Service Centre · NH-42 Madanapalle</div>
+        <h1 class="c-h1">AMB MOTORS<br/></h1>
+        <p class="c-p">NH-42, Ammacheruvu Mitta, Madanapalle — Andhra Pradesh's trusted AL authorised partner with 25+ certified technicians & 20,000 sq.ft. workshop.</p>
+        <div class="c-btns">
+          <a href="https://maps.app.goo.gl/UGYcSDFKhPtGBYEr6?g_st=ac" target="_blank" rel="noopener" class="btn btn-w">📍 Get Directions</a>
+          <a href="tel:+918978972940" class="btn btn-ow">📞 Call Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /c-track -->
+
+  <div class="c-arr p" onclick="mvSlide(-1)" aria-label="Previous">
+    <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+  </div>
+  <div class="c-arr n" onclick="mvSlide(1)" aria-label="Next">
+    <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+  </div>
+  <div class="c-dots" id="cDots">
+    <div class="cdot on" onclick="goSlide(0)"></div>
+    <div class="cdot" onclick="goSlide(1)"></div>
+    <div class="cdot" onclick="goSlide(2)"></div>
+    <div class="cdot" onclick="goSlide(3)"></div>
+    <div class="cdot" onclick="goSlide(4)"></div>
+  </div>
+  <div class="c-prog"><div class="c-bar" id="cBar"></div></div>
+</div>
+
+<!-- ══ AL BAND ══ -->
+<div class="al-band">
+  <svg width="34" height="34" viewBox="0 0 48 48" fill="none">
+    <circle cx="24" cy="24" r="22" stroke="#016FB6" stroke-width="3"/>
+    <circle cx="24" cy="24" r="14" stroke="#016FB6" stroke-width="2"/>
+    <path d="M18 32V18l6-4 6 4v14" stroke="#016FB6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 26h12" stroke="#016FB6" stroke-width="2"/>
+  </svg>
+  <div class="al-logo-t">AMB Motors ASHOK LEYLAND Authorised Service Center· Genuine Parts Stockist · Madanapalle, Andhra Pradesh</div>
+  <div class="alb-pipe"></div>
+  <!-- <p>Authorised Service Center· Genuine Parts Stockist · Madanapalle, Andhra Pradesh</p> -->
+  <div class="alb-pipe"></div>
+  <span class="al-tag b">✓ Authorised</span>
+  <span class="al-tag g">✓ Genuine Parts</span>
+  <span class="al-tag o">✓ Certified Techs</span>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">What We Offer</div>
+      <h2 class="sec-h">COMPLETE <span class="bl">SERVICE</span> SOLUTIONS</h2>
+      <p class="sec-p">Factory-certified technicians handling every aspect of your Ashok Leyland vehicle — from scheduled maintenance to complex overhauls.</p>
+    </div>
+    <div class="svc-grid">
+      <!-- Service images: real AL truck images showing different service angles -->
+      <div class="svc-card reveal rd1">
+        <div class="svc-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp" alt="Periodic maintenance Ashok Leyland"/>
+          <div class="svc-img-grad"></div>
+        </div>
+        <div class="svc-body"><h3>Periodic Maintenance</h3><p>Scheduled oil changes, filter replacements, belt inspections and full multi-point checks to AL factory specs.</p></div>
+      </div>
+      <div class="svc-card reveal rd2">
+        <div class="svc-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/4825-1674193295.webp" alt="Engine overhaul AVTR"/>
+          <div class="svc-img-grad"></div>
+        </div>
+        <div class="svc-body"><h3>Engine Overhaul</h3><p>Complete iEGR/BS6 engine diagnostics, reconditioning and full rebuilds using OEM tooling and genuine AL components.</p></div>
+      </div>
+      <div class="svc-card reveal rd3">
+        <div class="svc-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/boss-1415-hb-1614071349.webp" alt="Transmission axle BOSS truck"/>
+          <div class="svc-img-grad"></div>
+        </div>
+        <div class="svc-body"><h3>Transmission & Axle</h3><p>Gearbox repair, differential service, axle shaft replacement and clutch system overhauls for all AL platforms.</p></div>
+      </div>
+      <div class="svc-card reveal rd4">
+        <div class="svc-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1920-hf-1671102506.webp" alt="Brake suspension 1920 HF"/>
+          <div class="svc-img-grad"></div>
+        </div>
+        <div class="svc-body"><h3>Brake & Suspension</h3><p>Air brake system overhaul, disc/drum replacement, suspension geometry correction and wheel alignment.</p></div>
+      </div>
+      <div class="svc-card reveal rd1">
+        <div class="svc-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1915-he-1693482164.webp" alt="Electrical diagnostics Ecomet"/>
+          <div class="svc-img-grad"></div>
+        </div>
+        <div class="svc-body"><h3>Electrical & Diagnostics</h3><p>ECU scanning, wiring harness repair, alternator/starter service and full AL proprietary diagnostic software checks.</p></div>
+      </div>
+      <div class="svc-card reveal rd2">
+        <div class="svc-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/partner-6-tyre-1614076276.webp" alt="Body chassis Partner truck"/>
+          <div class="svc-img-grad"></div>
+        </div>
+        <div class="svc-body"><h3>Body & Chassis</h3><p>Chassis straightening, anti-rust treatment, cabin panel repair, painting and structural integrity restoration.</p></div>
+      </div>
+      <div class="svc-card reveal rd3">
+        <div class="svc-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/taurus-3532-1769146071.webp" alt="Ashok Leyland TAURUS 3532 tipper"/>
+          <div class="svc-img-grad"></div>
+        </div>
+        <div class="svc-body"><h3>Fleet AMC Packages</h3><p>Annual Maintenance Contracts with priority slots, dedicated account managers and predictive maintenance scheduling.</p></div>
+      </div>
+      <div class="svc-card reveal rd4">
+        <div class="svc-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/hippo-5536-6x4-1769147222.webp" alt="Ashok Leyland HIPPO 5536 6x4 tractor trailer"/>
+          <div class="svc-img-grad"></div>
+        </div>
+        <div class="svc-body"><h3>24×7 Breakdown Support</h3><p>Round-the-clock emergency breakdown assistance across Madanapalle, Chittoor, Kurnool and surrounding districts.</p></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-  <!-- FOOTER -->
+<!-- ══ VEHICLES ══ -->
+<section id="vehicles">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Ashok Leyland Models</div>
+      <h2 class="sec-h">VEHICLES WE <span class="bl">SERVICE</span></h2>
+      <p class="sec-p">From 2.5-tonne SCV to 55-tonne heavy-haul AVTR — AMB Motors is factory-certified across the entire Ashok Leyland lineup.</p>
+    </div>
+    <div class="vtabs">
+      <button class="vtab on" onclick="filterV('all',this)">All Models</button>
+      <button class="vtab" onclick="filterV('truck',this)">Trucks & Tippers</button>
+      <button class="vtab" onclick="filterV('bus',this)">Buses</button>
+      <button class="vtab" onclick="filterV('lcv',this)">Light Commercial</button>
+    </div>
+    <div class="vc-grid" id="vcGrid">
 
-  <footer>
+      <!-- 1. AVTR Series -->
+      <div class="vc-card reveal rd1" data-cat="truck">
+        <div class="vc-img-wrap">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/4825-1674193295.webp" alt="Ashok Leyland AVTR 4825 heavy truck" loading="lazy"/>
+          <div class="vc-img-grad"></div>
+          <span class="badge badge-y">Flagship</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-ser">Heavy Duty Truck</div><h3>AVTR Series</h3>
+          <div class="vc-specs">
+            <div class="vc-sp"><div class="vc-sp-l">Power</div><div class="vc-sp-v">280–480 HP</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">GVW</div><div class="vc-sp-v">Up to 55T</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Config</div><div class="vc-sp-v">4×2 to 8×4</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Engine</div><div class="vc-sp-v">H Series BS6</div></div>
+          </div>
+          <div class="vc-tags"><span class="vc-tag">Modular</span><span class="vc-tag">BS6</span><span class="vc-tag">Long Haul</span></div>
+        </div>
+      </div>
 
-    <p>
-      © 2026 AMB Motors | Ashok Leyland Authorised Service Center
-    </p>
+      <!-- 2. BOSS / CAPTAIN -->
+      <div class="vc-card reveal rd2" data-cat="truck">
+        <div class="vc-img-wrap">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/boss-1415-hb-1614071349.webp" alt="Ashok Leyland BOSS 1415 HB" loading="lazy"/>
+          <div class="vc-img-grad"></div>
+          <span class="badge badge-o">Popular</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-ser">ICV / HCV Truck</div><h3>BOSS / CAPTAIN</h3>
+          <div class="vc-specs">
+            <div class="vc-sp"><div class="vc-sp-l">Power</div><div class="vc-sp-v">140–240 HP</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">GVW</div><div class="vc-sp-v">10T – 25T</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Use</div><div class="vc-sp-v">Tipper/Cargo</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Engine</div><div class="vc-sp-v">Neptune</div></div>
+          </div>
+          <div class="vc-tags"><span class="vc-tag">Tipper</span><span class="vc-tag">Cargo</span><span class="vc-tag">Mining</span></div>
+        </div>
+      </div>
 
-  </footer>
+      <!-- 3. AVTR 1920 HG (6×4) -->
+      <div class="vc-card reveal rd3" data-cat="truck">
+        <div class="vc-img-wrap">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp" alt="Ashok Leyland AVTR 1920 HG truck" loading="lazy"/>
+          <div class="vc-img-grad"></div>
+        </div>
+        <div class="vc-body">
+          <div class="vc-ser">Heavy Duty 6×4</div><h3>AVTR 1920 / 2820</h3>
+          <div class="vc-specs">
+            <div class="vc-sp"><div class="vc-sp-l">Power</div><div class="vc-sp-v">200 HP</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">GVW</div><div class="vc-sp-v">19T – 28T</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Config</div><div class="vc-sp-v">6×4</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Fuel</div><div class="vc-sp-v">Diesel/LNG</div></div>
+          </div>
+          <div class="vc-tags"><span class="vc-tag">Tractor-Trailer</span><span class="vc-tag">Sleeper</span></div>
+        </div>
+      </div>
 
-  <!-- SLIDER SCRIPT -->
+      <!-- 4. Ecomet 1915 HE -->
+      <div class="vc-card reveal rd1" data-cat="truck">
+        <div class="vc-img-wrap">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1915-he-1693482164.webp" alt="Ashok Leyland Ecomet Star 1915 HE" loading="lazy"/>
+          <div class="vc-img-grad"></div>
+        </div>
+        <div class="vc-body">
+          <div class="vc-ser">Medium Duty Truck</div><h3>ECOMET STAR 1915 HE</h3>
+          <div class="vc-specs">
+            <div class="vc-sp"><div class="vc-sp-l">Power</div><div class="vc-sp-v">150 HP</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">GVW</div><div class="vc-sp-v">Up to 19T</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Payload</div><div class="vc-sp-v">Up to 13T</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Fuel</div><div class="vc-sp-v">Diesel/CNG</div></div>
+          </div>
+          <div class="vc-tags"><span class="vc-tag">City Haulage</span><span class="vc-tag">Versatile</span><span class="vc-tag">CNG</span></div>
+        </div>
+      </div>
 
-  <script>
+      <!-- 5. 1920 HF – for bus/intercity image -->
+      <div class="vc-card reveal rd2" data-cat="bus">
+        <div class="vc-img-wrap">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1920-hf-1671102506.webp" alt="Ashok Leyland 1920 HF" loading="lazy"/>
+          <div class="vc-img-grad"></div>
+          <span class="badge badge-b">Bus Chassis</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-ser">Bus & Intercity</div><h3>VIKING / CHEETAH / SUNSHINE</h3>
+          <div class="vc-specs">
+            <div class="vc-sp"><div class="vc-sp-l">Seats</div><div class="vc-sp-v">25–60</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Engine</div><div class="vc-sp-v">H-Series</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Category</div><div class="vc-sp-v">City / School</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">CNG</div><div class="vc-sp-v">Available</div></div>
+          </div>
+          <div class="vc-tags"><span class="vc-tag">City Route</span><span class="vc-tag">School</span><span class="vc-tag">Staff</span></div>
+        </div>
+      </div>
 
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot");
+      <!-- 6. Partner 6 Tyre -->
+      <div class="vc-card reveal rd3" data-cat="lcv">
+        <div class="vc-img-wrap">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/partner-6-tyre-1614076276.webp" alt="Ashok Leyland Partner 6 Tyre ICV" loading="lazy"/>
+          <div class="vc-img-grad"></div>
+        </div>
+        <div class="vc-body">
+          <div class="vc-ser">Intermediate Commercial</div><h3>PARTNER ICV</h3>
+          <div class="vc-specs">
+            <div class="vc-sp"><div class="vc-sp-l">GVW</div><div class="vc-sp-v">6T – 9T</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Power</div><div class="vc-sp-v">110–140 HP</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Tyres</div><div class="vc-sp-v">4 / 6 Tyre</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Body</div><div class="vc-sp-v">7–17 Ft LB</div></div>
+          </div>
+          <div class="vc-tags"><span class="vc-tag">Cargo</span><span class="vc-tag">FMCG</span><span class="vc-tag">E-Commerce</span></div>
+        </div>
+      </div>
 
-    let current = 0;
+      <!-- 7. TAURUS 3532 – 2026 New Launch -->
+      <div class="vc-card reveal rd1" data-cat="truck">
+        <div class="vc-img-wrap">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/taurus-3532-1769146071.webp" alt="Ashok Leyland TAURUS 3532 high-HP tipper 2026" loading="lazy"/>
+          <div class="vc-img-grad"></div>
+          <span class="badge badge-y">New 2026</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-ser">High-HP Tipper — Relaunched Jan 2026</div><h3>TAURUS 3532</h3>
+          <div class="vc-specs">
+            <div class="vc-sp"><div class="vc-sp-l">Power</div><div class="vc-sp-v">320 HP</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">GVW</div><div class="vc-sp-v">35,000 kg</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Torque</div><div class="vc-sp-v">1,300 Nm</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Engine</div><div class="vc-sp-v">A-Series 8L 6-Cyl</div></div>
+          </div>
+          <div class="vc-tags"><span class="vc-tag">High-HP Tipper</span><span class="vc-tag">Mining</span><span class="vc-tag">AVTR Platform</span></div>
+        </div>
+      </div>
 
-    function showSlide(index){
+      <!-- 8. HIPPO 5536 6x4 – 2026 New Launch -->
+      <div class="vc-card reveal rd2" data-cat="truck">
+        <div class="vc-img-wrap">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/hippo-5536-6x4-1769147222.webp" alt="Ashok Leyland HIPPO 5536 6x4 tractor trailer 2026" loading="lazy"/>
+          <div class="vc-img-grad"></div>
+          <span class="badge badge-y">New 2026</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-ser">Tractor-Trailer — Relaunched Jan 2026</div><h3>HIPPO 5536 6×4</h3>
+          <div class="vc-specs">
+            <div class="vc-sp"><div class="vc-sp-l">Power</div><div class="vc-sp-v">355 HP</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">GCW</div><div class="vc-sp-v">55,000 kg</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Torque</div><div class="vc-sp-v">1,600 Nm</div></div>
+            <div class="vc-sp"><div class="vc-sp-l">Engine</div><div class="vc-sp-v">A-Series 8L 6-Cyl</div></div>
+          </div>
+          <div class="vc-tags"><span class="vc-tag">Tractor-Trailer</span><span class="vc-tag">Heavy Haul</span><span class="vc-tag">AVTR Platform</span></div>
+        </div>
+      </div>
 
-      slides.forEach((slide)=>{
-        slide.classList.remove("active");
-      });
+    </div>
+  </div>
+</section>
 
-      dots.forEach((dot)=>{
-        dot.classList.remove("active");
-      });
+<!-- ══ SPARE PARTS ══ -->
+<section id="spares">
+  <div class="spares-glow"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="reveal">
+      <div class="eyebrow">100% Genuine OEM</div>
+      <h2 class="sec-h">ASHOK LEYLAND <span class="bl">GENUINE PARTS™</span></h2>
+      <p class="sec-p">QR-authenticated, hologram-verified Ashok Leyland Genuine Parts — precision-matched and warranty-backed for every model we service.</p>
+    </div>
+    <div class="parts-grid">
 
-      slides[index].classList.add("active");
-      dots[index].classList.add("active");
+      <div class="part-card reveal rd1">
+        <div class="part-img">
+          <!-- Engine components: AVTR engine detail -->
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp" alt="Engine components" loading="lazy"/>
+          <div class="part-img-grad"></div>
+        </div>
+        <div class="part-body"><h4>Engine Components</h4><p>Pistons, rings, liners, gaskets, cylinder heads, camshafts, fuel injectors, oil pumps, turbochargers.</p>
+          <div class="part-tags"><span class="pt">Pistons</span><span class="pt">Liner</span><span class="pt">Gasket</span><span class="pt">Injectors</span><span class="pt">Turbo</span></div>
+        </div>
+      </div>
 
-    }
+      <div class="part-card reveal rd2">
+        <div class="part-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/boss-1415-hb-1614071349.webp" alt="Transmission gearbox parts" loading="lazy"/>
+          <div class="part-img-grad"></div>
+        </div>
+        <div class="part-body"><h4>Transmission Parts</h4><p>Gearboxes, clutch sets, release bearings, synchroniser rings, propeller shafts, UJ crosses.</p>
+          <div class="part-tags"><span class="pt">Clutch Set</span><span class="pt">Gearbox</span><span class="pt">Bearing</span><span class="pt">Prop Shaft</span></div>
+        </div>
+      </div>
 
-    document.querySelector(".next").addEventListener("click", ()=>{
+      <div class="part-card reveal rd3">
+        <div class="part-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/4825-1674193295.webp" alt="Brake system parts" loading="lazy"/>
+          <div class="part-img-grad"></div>
+        </div>
+        <div class="part-body"><h4>Brake System</h4><p>Brake linings, drums, disc pads, master cylinders, air brake valves, wheel cylinders, calipers.</p>
+          <div class="part-tags"><span class="pt">Brake Lining</span><span class="pt">Drum</span><span class="pt">Air Valve</span><span class="pt">Caliper</span></div>
+        </div>
+      </div>
 
-      current++;
+      <div class="part-card reveal rd4">
+        <div class="part-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1915-he-1693482164.webp" alt="Electrical parts alternator" loading="lazy"/>
+          <div class="part-img-grad"></div>
+        </div>
+        <div class="part-body"><h4>Electrical Parts</h4><p>Alternators, starters, wiring harnesses, ECU modules, headlamps, tail lamps, batteries.</p>
+          <div class="part-tags"><span class="pt">Alternator</span><span class="pt">Starter</span><span class="pt">Harness</span><span class="pt">ECU</span></div>
+        </div>
+      </div>
 
-      if(current >= slides.length){
-        current = 0;
-      }
+      <div class="part-card reveal rd1">
+        <div class="part-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1920-hf-1671102506.webp" alt="Suspension steering parts" loading="lazy"/>
+          <div class="part-img-grad"></div>
+        </div>
+        <div class="part-body"><h4>Suspension & Steering</h4><p>Shock absorbers, leaf springs, U-bolts, tie rods, drag links, king pin kits, steering racks.</p>
+          <div class="part-tags"><span class="pt">Shock Absorber</span><span class="pt">Leaf Spring</span><span class="pt">Tie Rod</span></div>
+        </div>
+      </div>
 
-      showSlide(current);
+      <div class="part-card reveal rd2">
+        <div class="part-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/partner-6-tyre-1614076276.webp" alt="Cooling fuel system radiator" loading="lazy"/>
+          <div class="part-img-grad"></div>
+        </div>
+        <div class="part-body"><h4>Cooling & Fuel System</h4><p>Radiators, water pumps, thermostats, coolant hoses, fuel pumps, fuel filters, EGR valves.</p>
+          <div class="part-tags"><span class="pt">Radiator</span><span class="pt">Water Pump</span><span class="pt">Fuel Filter</span><span class="pt">EGR</span></div>
+        </div>
+      </div>
 
-    });
+      <div class="part-card reveal rd3">
+        <div class="part-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/taurus-3532-1769146071.webp" alt="Ashok Leyland TAURUS 3532 body cabin parts" loading="lazy"/>
+          <div class="part-img-grad"></div>
+        </div>
+        <div class="part-body"><h4>Body & Cabin Parts</h4><p>Bumpers, mudguards, cabin panels, door assemblies, mirrors, seats, instrument clusters, windshield.</p>
+          <div class="part-tags"><span class="pt">Bumper</span><span class="pt">Mudguard</span><span class="pt">Door Panel</span><span class="pt">Glass</span></div>
+        </div>
+      </div>
 
-    document.querySelector(".prev").addEventListener("click", ()=>{
+      <div class="part-card reveal rd4">
+        <div class="part-img">
+          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/hippo-5536-6x4-1769147222.webp" alt="Ashok Leyland HIPPO 5536 wheels axle" loading="lazy"/>
+          <div class="part-img-grad"></div>
+        </div>
+        <div class="part-body"><h4>Wheels & Axle</h4><p>Wheel rims, hub assemblies, axle shafts, differential gears, bearing kits, tyre valve accessories.</p>
+          <div class="part-tags"><span class="pt">Axle Shaft</span><span class="pt">Hub Assembly</span><span class="pt">Rim</span><span class="pt">Diff Gear</span></div>
+        </div>
+      </div>
 
-      current--;
+    </div>
 
-      if(current < 0){
-        current = slides.length - 1;
-      }
+    <div class="parts-cta reveal">
+      <div>
+        <h3>Can't Find Your Part?</h3>
+        <p>Our parts desk has access to the complete AL catalogue. Same-day availability on most popular models.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="tel:+918978972940" class="btn btn-w" style="color:var(--alb)">📞 Call Parts Desk</a>
+        <a href="https://wa.me/918978972940?text=Hi%20AMB%20Motors!%20I%20need%20Ashok%20Leyland%20spare%20parts.%20Please%20assist." target="_blank" rel="noopener" class="btn btn-g">💬 WhatsApp Parts</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      showSlide(current);
+<!-- ══ GALLERY ══ -->
+<section id="gallery">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Our Facility & Fleet</div>
+      <h2 class="sec-h">ASHOK LEYLAND <span class="bl">VEHICLE GALLERY</span></h2>
+      <p class="sec-p">A showcase of the Ashok Leyland vehicles we service every day — from legendary TAURUS tippers to HIPPO heavy-haul tractors and AVTR platform trucks.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item gal-big reveal rd1">
+        <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/4825-1674193295.webp" alt="Ashok Leyland AVTR 4825 flagship truck" loading="lazy"/>
+        <div class="gal-cap">AVTR 4825 – Flagship Heavy Duty</div>
+      </div>
+      <div class="gal-item reveal rd2">
+        <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/boss-1415-hb-1614071349.webp" alt="Ashok Leyland BOSS 1415 HB" loading="lazy"/>
+        <div class="gal-cap">BOSS 1415 HB – ICV Workhorse</div>
+      </div>
+      <div class="gal-item gal-tall reveal rd3">
+        <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp" alt="Ashok Leyland AVTR 1920 HG" loading="lazy"/>
+        <div class="gal-cap">AVTR 1920 HG – Long Haul Tractor</div>
+      </div>
+      <div class="gal-item reveal rd1">
+        <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1915-he-1693482164.webp" alt="Ashok Leyland Ecomet 1915 HE" loading="lazy"/>
+        <div class="gal-cap">Ecomet Star 1915 HE – City Truck</div>
+      </div>
+      <div class="gal-item reveal rd2">
+        <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/taurus-3532-1769146071.webp" alt="Ashok Leyland TAURUS 3532 tipper" loading="lazy"/>
+        <div class="gal-cap">TAURUS 3532 – High-HP Tipper · New 2026</div>
+      </div>
+      <div class="gal-item reveal rd3">
+        <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/hippo-5536-6x4-1769147222.webp" alt="Ashok Leyland HIPPO 5536 6x4 tractor trailer" loading="lazy"/>
+        <div class="gal-cap">HIPPO 5536 6×4 – Flagship Tractor · New 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    });
+<!-- ══ WHY US ══ -->
+<section id="why">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">The AMB Advantage</div>
+      <h2 class="sec-h">WHY CHOOSE <span class="bl">AMB MOTORS</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-pts">
+        <div class="why-pt reveal"><div class="why-n">01</div><div><h4>Factory-Trained AL Technicians</h4><p>25+ technicians certified at AL's Training Academy, regularly upskilled on AVTR, iEGR, BS6, and EV platforms.</p></div></div>
+        <div class="why-pt reveal rd1"><div class="why-n">02</div><div><h4>100% Genuine Parts – Hologram Verified</h4><p>QR-authenticated Ashok Leyland Genuine Parts™ only. Every part preserves your vehicle warranty and performance.</p></div></div>
+        <div class="why-pt reveal rd2"><div class="why-n">03</div><div><h4>Advanced AL Diagnostic Equipment</h4><p>AL-approved DOST diagnostic scanners, multi-channel tools and precision instruments across our 20,000 sq.ft. facility.</p></div></div>
+        <div class="why-pt reveal rd3"><div class="why-n">04</div><div><h4>Transparent Pricing & Digital Reports</h4><p>Written estimates before work begins. Zero hidden charges. Digital post-service health reports for every vehicle.</p></div></div>
+        <div class="why-pt reveal rd4"><div class="why-n">05</div><div><h4>Prime NH-42 Location – Madanapalle</h4><p>On National Highway 42 — strategically serving Chittoor, Kurnool, Kadapa and the Bengaluru corridor.</p></div></div>
+      </div>
+      <div class="why-cert reveal rd2">
+        <img class="why-cert-img" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1920-hf-1671102506.webp" alt="Ashok Leyland authorised service" loading="lazy"/>
+        <div class="why-cert-body">
+          <div class="cert-circle">AMB</div>
+         <!-- <div class="cert-yr">MOTORS</div> -->
+          <div class="cert-yr-l">Authorised AL Partner </div>
+          <div class="cert-pills">
+            <div class="cert-pill">✓ ISO 9001:2015</div>
+            <div class="cert-pill">✓ AL Certified Workshop</div>
+            <div class="cert-pill">✓ Genuine Parts Stockist</div>
+            <div class="cert-pill">✓ Warranty Service Centre</div>
+          </div>
+          <div class="cert-sg">
+            <div class="cstat"><div class="cstat-n">8,500+</div><div class="cstat-l">Vehicles Serviced</div></div>
+            <div class="cstat"><div class="cstat-n">25+</div><div class="cstat-l">Certified Techs</div></div>
+            <div class="cstat"><div class="cstat-n">98%</div><div class="cstat-l">Satisfaction</div></div>
+            <div class="cstat"><div class="cstat-n">4.9★</div><div class="cstat-l">Google Rating</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    setInterval(()=>{
+<!-- ══ BOOKING ══ -->
+<section id="booking">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2 class="sec-h">BOOK A <span class="bl">SERVICE</span></h2>
+    </div>
+    <div class="book-grid">
+      <div class="form-box reveal">
+        <div class="form-ttl">🔧 Service Request Form</div>
+        <div class="fg-grid">
+          <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your name"/></div>
+          <div class="fg"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX"/></div>
+          <div class="fg"><label>Vehicle Model *</label>
+            <select>
+              <option value="">Select model</option>
+              <optgroup label="Heavy Duty Trucks"><option>AVTR (4×2 / 6×4 / 8×4)</option><option>BOSS 1215 / 1315 / 1415 HB</option><option>CAPTAIN 2523 / 3518</option></optgroup>
+              <optgroup label="Medium Duty"><option>ECOMET 912 / 1015 / 1615 HE / 1915 HE</option><option>PARTNER 4 / 6 Tyre</option></optgroup>
+              <optgroup label="New 2026 Models"><option>TAURUS 3532 (High-HP Tipper)</option><option>HIPPO 5536 6x4 (Tractor-Trailer)</option></optgroup>
+              <optgroup label="Buses"><option>VIKING / CHEETAH / SUNSHINE School Bus</option><option>City / Staff / Intercity Bus</option></optgroup>
+              <option>Other Ashok Leyland</option>
+            </select>
+          </div>
+          <div class="fg"><label>Registration No.</label><input type="text" placeholder="e.g. AP 03 AB 1234"/></div>
+          <div class="fg"><label>Service Type *</label>
+            <select>
+              <option value="">Select service</option>
+              <option>Periodic Maintenance</option>
+              <option>Engine Overhaul / Repair</option>
+              <option>Brake & Suspension</option>
+              <option>Electrical & Diagnostics</option>
+              <option>Transmission & Clutch</option>
+              <option>Body & Chassis Repair</option>
+              <option>Spare Parts Purchase</option>
+              <option>Fleet AMC Enquiry</option>
+            </select>
+          </div>
+          <div class="fg"><label>Preferred Date</label><input type="date"/></div>
+          <div class="fg full"><label>Issue Description</label><textarea placeholder="Describe the issue or any specific requirements..."></textarea></div>
+          <div class="fg full"><button class="btn btn-b" style="width:100%;justify-content:center;font-size:15px;padding:13px">🚛 Submit Service Request →</button></div>
+        </div>
+      </div>
 
-      current++;
+      <div class="contact-side reveal rd2">
+        <div class="cp-card">
+          <div class="cp-icon">📍</div>
+          <div><h4>Workshop Address</h4><p>AMB Motors<br/>NH-42, Ammacheruvu Mitta<br/>Madanapalle – 517325<br/>Andhra Pradesh, INDIA</p></div>
+        </div>
+        <div class="cp-card">
+          <div class="cp-icon">📞</div>
+          <div><h4>Call Us</h4><p><a href="tel:+918978972940">+91 89789 72940</a></p></div>
+        </div>
+        <div class="cp-card">
+          <div class="cp-icon">💬</div>
+          <div><h4>WhatsApp</h4><p><a href="https://wa.me/918978972940?text=Hello%20AMB%20Motors!%20I%20need%20vehicle%20service%20assistance." target="_blank" rel="noopener">+91 89789 72940</a><br/><small style="color:var(--mgray)">Tap to open WhatsApp</small></p></div>
+        </div>
+        <div class="cp-card">
+          <div class="cp-icon">⏰</div>
+          <div><h4>Working Hours</h4>
+            <table class="hrs-tbl">
+              <tr><td>Mon – Fri</td><td>8:00 AM – 7:00 PM</td></tr>
+              <tr><td>Saturday</td><td>8:00 AM – 5:00 PM</td></tr>
+              <tr><td>Sunday</td><td>Emergency Only</td></tr>
+            </table>
+          </div>
+        </div>
+        <a class="map-btn" href="https://maps.app.goo.gl/UGYcSDFKhPtGBYEr6?g_st=ac" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          📍 Open in Google Maps
+        </a>
+        <a class="wa-btn-full" href="https://wa.me/918978972940?text=Hello%20AMB%20Motors!%20I%20need%20service%20assistance%20for%20my%20Ashok%20Leyland%20vehicle." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="white"><path d="M16 1C7.73 1 1 7.73 1 16c0 2.65.69 5.14 1.9 7.3L1 31l7.9-1.87C10.9 30.35 13.4 31 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm6.73 18.12c-.37-.18-2.18-1.07-2.52-1.2-.33-.12-.58-.18-.82.19-.24.36-.95 1.2-1.17 1.44-.21.25-.43.28-.8.1-.36-.18-1.53-.56-2.91-1.8-1.08-.96-1.8-2.14-2.02-2.5-.2-.36-.02-.56.16-.74l.55-.64c.18-.2.24-.36.37-.61.12-.24.06-.46-.03-.64-.1-.18-.82-1.97-1.12-2.7-.3-.71-.6-.61-.82-.62h-.7c-.24 0-.64.09-.97.46-.34.36-1.28 1.25-1.28 3.06 0 1.8 1.31 3.54 1.5 3.79.18.24 2.58 3.93 6.25 5.51.87.38 1.55.6 2.08.77.87.28 1.67.24 2.3.14.7-.1 2.18-.89 2.49-1.75.3-.86.3-1.6.21-1.75-.08-.14-.32-.23-.69-.41z"/></svg>
+          💬 WhatsApp Us Now
+        </a>
+        <a class="btn btn-b" href="tel:+918978972940" style="justify-content:center;font-size:15px;padding:13px">
+          📞 Call: +91 89789 72940
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      if(current >= slides.length){
-        current = 0;
-      }
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Customer Stories</div>
+      <h2 class="sec-h">WHAT OUR <span class="bl">CLIENTS</span> SAY</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal rd1">
+        <div class="testi-qm">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-txt">AMB Motors has been servicing our 12 AVTR trucks on NH-42 for 5+ years. Downtime reduced by 40% since we moved to their AMC package. Fast, honest, always genuine AL parts with holograms.</p>
+        <div class="testi-auth"><div class="testi-av">RK</div><div><div class="testi-name">Ramesh Kumar</div><div class="testi-role">Fleet Manager · RK Logistics, Chittoor · 12 AVTR Trucks</div></div></div>
+      </div>
+      <div class="testi-card reveal rd2">
+        <div class="testi-qm">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-txt">My TAURUS 3532 tipper had a critical engine issue mid-project. AMB Motors diagnosed it within 2 hours using AL diagnostic software and had us back on site the very next morning. Best AL service in Madanapalle!</p>
+        <div class="testi-auth"><div class="testi-av">SM</div><div><div class="testi-name">Suresh Muthukumar</div><div class="testi-role">Fleet Owner · TAURUS 3532 Tipper · Madanapalle</div></div></div>
+      </div>
+      <div class="testi-card reveal rd3">
+        <div class="testi-qm">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-txt">Transparent billing, digital service reports, and hologram-verified AL genuine parts every time. Professional setup on NH-42. Highly recommended for any fleet operator on the Bengaluru–Tirupati corridor.</p>
+        <div class="testi-auth"><div class="testi-av">VP</div><div><div class="testi-name">Vijay Patil</div><div class="testi-role">Transport Contractor · 3 CAPTAIN Tippers · Kurnool</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      showSlide(current);
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo-a" href="#" style="padding:0">
+        <div class="logo-circle" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2)"><span style="color:#fff">AMB</span></div>
+        <div>
+          <div class="logo-brand">AMB Motors</div>
+          <div class="logo-sub">Authorised Ashok Leyland Service</div>
+        </div>
+      </a>
+      <p>NH-42, Ammacheruvu Mitta, Madanapalle – 517325<br/>Andhra Pradesh, INDIA<br/>Factory-trained expertise · 100% genuine AL parts ·</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Periodic Maintenance</a></li>
+        <li><a href="#services">Engine Overhaul</a></li>
+        <li><a href="#services">Transmission & Axle</a></li>
+        <li><a href="#services">Brake & Suspension</a></li>
+        <li><a href="#services">Electrical Diagnostics</a></li>
+        <li><a href="#services">Fleet AMC Plans</a></li>
+        <li><a href="#services">24×7 Breakdown</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>AL Vehicles</h5>
+      <ul>
+        <li><a href="#vehicles">AVTR Heavy Trucks</a></li>
+        <li><a href="#vehicles">BOSS / CAPTAIN</a></li>
+        <li><a href="#vehicles">Ecomet Star Series</a></li>
+        <li><a href="#vehicles">TAURUS 3532 Tipper</a></li>
+        <li><a href="#vehicles">PARTNER ICV</a></li>
+        <li><a href="#vehicles">HIPPO 5536 6×4</a></li>
+        <li><a href="#vehicles">Viking / Cheetah Bus</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+918978972940">📞 +91 89789 72940</a></li>
+        <li><a href="https://wa.me/918978972940" target="_blank">💬 WhatsApp Us</a></li>
+        <li><a href="https://maps.app.goo.gl/UGYcSDFKhPtGBYEr6?g_st=ac" target="_blank">📍 NH-42, Madanapalle 517325</a></li>
+        <li><a href="mailto:service@ambmotors.in">✉ service@ambmotors.in</a></li>
+        <li><a href="#">⏰ Mon–Sat 8AM – 7PM</a></li>
+        <li><a href="#spares">🔩 Order Spare Parts</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <p>© 2025 AMB Motors, Madanapalle. All rights reserved. | Ashok Leyland Authorised Service Partner, Andhra Pradesh</p>
+    <div class="al-pill">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Authorised Ashok Leyland Partner
+    </div>
+  </div>
+</footer>
 
-    },5000);
+<script>
+// ── CAROUSEL ──
+let cur=0, TOTAL=5, DELAY=5400;
+const track=document.getElementById('cTrack');
+const slides=document.querySelectorAll('.cslide');
+const dots=document.querySelectorAll('.cdot');
+const bar=document.getElementById('cBar');
+let autoT;
 
-  </script>
-<!-- WHATSAPP BUTTON -->
+function goSlide(n){
+  slides[cur].classList.remove('on');
+  dots[cur].classList.remove('on');
+  cur=((n%TOTAL)+TOTAL)%TOTAL;
+  slides[cur].classList.add('on');
+  dots[cur].classList.add('on');
+  track.style.transform=`translateX(-${cur*100}%)`;
+  resetBar();
+}
+function mvSlide(d){goSlide(cur+d)}
+function startAuto(){clearInterval(autoT);autoT=setInterval(()=>goSlide(cur+1),DELAY)}
+function resetBar(){
+  bar.style.transition='none';bar.style.width='0%';
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    bar.style.transition=`width ${DELAY}ms linear`;bar.style.width='100%';
+  }));
+}
+const hw=document.getElementById('heroWrap');
+hw.addEventListener('mouseenter',()=>{clearInterval(autoT);bar.style.transition='none'});
+hw.addEventListener('mouseleave',()=>{startAuto();resetBar()});
+let tx=0;
+hw.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+hw.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>40)goSlide(cur+(d>0?1:-1))},{passive:true});
+startAuto();resetBar();
 
-<a href="https://wa.me/918978972940"
-class="whatsapp-float"
-target="_blank">
+// ── SCROLL REVEAL ──
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-  <i class="fa-brands fa-whatsapp"></i>
+// ── VEHICLE FILTER ──
+function filterV(cat,btn){
+  document.querySelectorAll('.vtab').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('#vcGrid .vc-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+  });
+}
 
-</a>
-
+// ── SMOOTH SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+</script>
 </body>
 </html>
