@@ -343,7 +343,115 @@ footer{background:var(--albdp);padding:56px 48px 26px}
 
 @media(max-width:1024px){.svc-grid,.parts-grid{grid-template-columns:repeat(2,1fr)}.vc-grid{grid-template-columns:repeat(2,1fr)}.why-grid,.book-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr 1fr}.gal-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto}.gal-big,.gal-tall{grid-column:auto;grid-row:auto}}
 @media(max-width:640px){section,#gallery{padding:56px 18px}.topbar,.al-band,footer{padding-left:18px;padding-right:18px}nav{padding:0 16px}.nav-ul{display:none}.svc-grid,.parts-grid,.vc-grid,.testi-grid,.gal-grid{grid-template-columns:1fr}.hero{height:380px}.c-content{padding:0 22px}.c-h1{font-size:36px}.footer-grid{grid-template-columns:1fr}}
+
+/* PROFESSIONAL 24x7 BREAKDOWN STRIP */
+.breakdown-strip{
+max-width:1260px;
+margin:30px auto 40px;
+background:linear-gradient(135deg,#013660,#016FB6);
+border-left:6px solid #FF6B00;
+border-radius:14px;
+padding:28px 35px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+box-shadow:0 12px 35px rgba(1,111,182,.18);
+}
+.breakdown-left{display:flex;align-items:center;gap:20px}
+.breakdown-icon{font-size:48px;flex-shrink:0}
+.breakdown-content h2{font-family:'Teko',sans-serif;font-size:42px;color:#fff;margin:0;line-height:1}
+.breakdown-content p{color:rgba(255,255,255,.85);margin:8px 0 14px;max-width:650px}
+.breakdown-features{display:flex;flex-wrap:wrap;gap:10px}
+.breakdown-features span{background:rgba(255,255,255,.12);color:#fff;padding:6px 12px;border-radius:30px;font-size:12px}
+.breakdown-right{text-align:center;min-width:220px}
+.breakdown-call{display:inline-block;background:#FF6B00;color:#fff;text-decoration:none;padding:14px 28px;border-radius:8px;font-weight:700;letter-spacing:.05em;box-shadow:0 6px 20px rgba(255,107,0,.35)}
+.breakdown-number{color:#fff;margin-top:12px;font-size:22px;font-weight:700;font-family:'Rajdhani',sans-serif}
+@media(max-width:768px){
+.breakdown-strip{flex-direction:column;text-align:center}
+.breakdown-left{flex-direction:column}
+}
+
 </style>
+
+
+
+
+<style id="amb-clean-mobile-footer">
+.mobile-emergency-bar{display:none;}
+@media (max-width:768px){
+  .float-stack{
+    position:fixed !important;
+    right:12px !important;
+    bottom:120px !important;
+    z-index:99999 !important;
+    display:flex !important;
+    flex-direction:column !important;
+  }
+  .fab-tip{display:none !important;}
+
+  .mobile-emergency-bar{
+    display:block !important;
+    position:fixed !important;
+    left:0;right:0;bottom:0;
+    background:#FF6B00;
+    z-index:99998;
+    box-shadow:0 -4px 12px rgba(0,0,0,.2);
+  }
+  .emergency-title{
+    color:#fff;
+    text-align:center;
+    font-weight:700;
+    padding:8px 6px;
+    font-size:13px;
+  }
+  .emergency-actions{display:flex;height:52px;}
+  .emergency-actions a{
+    flex:1;display:flex;align-items:center;justify-content:center;
+    color:#fff;text-decoration:none;font-weight:700;
+  }
+  .emergency-actions a:first-child{
+    border-right:1px solid rgba(255,255,255,.25);
+  }
+  body{padding-bottom:105px !important;}
+}
+</style>
+
+
+<style id="seo-mobile-upgrade">
+.mobile-menu-toggle{display:none}
+@media(max-width:768px){
+  .mobile-menu-toggle{
+    display:flex;align-items:center;justify-content:center;
+    background:#016FB6;color:#fff;border:none;
+    font-size:28px;padding:10px;cursor:pointer
+  }
+  .nav-ul.mobile-hidden{display:none!important}
+  .nav-ul.mobile-open{
+    display:flex!important;flex-direction:column;
+    position:absolute;top:100%;left:0;right:0;
+    background:#016FB6;z-index:999
+  }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ const nav=document.querySelector('.nav-ul');
+ const btn=document.createElement('button');
+ btn.className='mobile-menu-toggle';
+ btn.innerHTML='☰';
+ const n=document.querySelector('nav');
+ if(n && nav){
+   nav.classList.add('mobile-hidden');
+   n.appendChild(btn);
+   btn.onclick=function(){
+      nav.classList.toggle('mobile-open');
+      nav.classList.toggle('mobile-hidden');
+   };
+ }
+});
+</script>
+
 </head>
 <body>
 
@@ -417,7 +525,7 @@ footer{background:var(--albdp);padding:56px 48px 26px}
 
     <!-- SLIDE 1 – AVTR Heavy Duty Truck -->
     <div class="cslide on" id="s0">
-      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/4825-1674193295.webp"
+      <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/4825-1674193295.webp"
            alt="Ashok Leyland AVTR 4825 heavy truck"
            onerror="this.src='https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp'"/>
       <div class="c-ov1"></div><div class="c-ov2"></div>
@@ -434,7 +542,7 @@ footer{background:var(--albdp);padding:56px 48px 26px}
 
     <!-- SLIDE 2 – BOSS 1415 HB Truck -->
     <div class="cslide" id="s1">
-      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/boss-1415-hb-1614071349.webp"
+      <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/boss-1415-hb-1614071349.webp"
            alt="Ashok Leyland BOSS 1415 HB truck"/>
       <div class="c-ov1"></div><div class="c-ov2"></div>
       <div class="c-content">
@@ -450,7 +558,7 @@ footer{background:var(--albdp);padding:56px 48px 26px}
 
     <!-- SLIDE 3 – AVTR 1920 HG (different variant) -->
     <div class="cslide" id="s2">
-      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp"
+      <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp"
            alt="Ashok Leyland AVTR 1920 HG truck"/>
       <div class="c-ov1"></div><div class="c-ov2"></div>
       <div class="c-content">
@@ -466,7 +574,7 @@ footer{background:var(--albdp);padding:56px 48px 26px}
 
     <!-- SLIDE 4 – TAURUS 3532 Tipper -->
     <div class="cslide" id="s3">
-      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/taurus-3532-1769146071.webp"
+      <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/taurus-3532-1769146071.webp"
            alt="Ashok Leyland TAURUS 3532 tipper"/>
       <div class="c-ov1"></div><div class="c-ov2"></div>
       <div class="c-content">
@@ -482,7 +590,7 @@ footer{background:var(--albdp);padding:56px 48px 26px}
 
     <!-- SLIDE 5 – Ecomet Truck (service centre context) -->
     <div class="cslide" id="s4">
-      <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1920-hf-1671102506.webp"
+      <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1920-hf-1671102506.webp"
            alt="Ashok Leyland 1920 HF truck at service centre"/>
       <div class="c-ov1"></div><div class="c-ov2"></div>
       <div class="c-content">
@@ -490,7 +598,7 @@ footer{background:var(--albdp);padding:56px 48px 26px}
         <h1 class="c-h1">AMB MOTORS<br/></h1>
         <p class="c-p">NH-42, Ammacheruvu Mitta, Madanapalle — Andhra Pradesh's trusted AL authorised partner with 25+ certified technicians & 20,000 sq.ft. workshop.</p>
         <div class="c-btns">
-          <a class="fab" href="https://maps.app.goo.gl/UGYcSDFKhPtGBYEr6?g_st=ac" target="_blank" rel="noopener" class="btn btn-w"> Get Directions</a>
+          <a class="fab" href="https://www.google.com/maps/dir/?api=1&destination=13.5890046,78.4962174&travelmode=driving" target="_blank" rel="noopener" class="btn btn-w"> Get Directions</a>
           <a href="tel:+918978972940" class="btn btn-ow">📞 Call Now</a>
         </div>
       </div>
@@ -516,7 +624,7 @@ footer{background:var(--albdp);padding:56px 48px 26px}
 
 <!-- ══ AL BAND ══ -->
 <div class="al-band">
- <img src="./al-logo.png" alt="Ashok Leyland Logo" style="width:42px;height:42px;border-radius:50%;object-fit:cover;background:#000;border:2px solid rgba(255,255,255,0.2)"/>
+ <img loading="lazy" src="./al-logo.png" alt="Ashok Leyland Logo" style="width:42px;height:42px;border-radius:50%;object-fit:cover;background:#000;border:2px solid rgba(255,255,255,0.2)"/>
   <div class="al-logo-t">AMB Motors ASHOK LEYLAND Authorised Best Service Center· Genuine Parts Stockist · Madanapalle, Andhra Pradesh</div>
   <div class="alb-pipe"></div>
   <!-- <p>Authorised Service Center· Genuine Parts Stockist · Madanapalle, Andhra Pradesh</p> -->
@@ -525,6 +633,37 @@ footer{background:var(--albdp);padding:56px 48px 26px}
   <span class="al-tag g">✓ Genuine Parts</span>
   <span class="al-tag o">✓ Certified Techs</span>
 </div>
+
+
+<section class="breakdown-strip">
+  <div class="breakdown-left">
+    <div class="breakdown-icon">🚚</div>
+    <div class="breakdown-content">
+      <h2>24/7 BREAKDOWN ASSISTANCE</h2>
+      <p>Highway Emergency Support for Ashok Leyland Trucks, Tippers, Buses and Commercial Vehicles</p>
+      <div class="breakdown-features">
+        <span>✓ Roadside Service</span>
+        <span>✓ Emergency Repairs</span>
+        <span>✓ Genuine Parts</span>
+        <span>✓ Fast Response</span>
+      </div>
+    </div>
+  </div>
+  <div class="breakdown-right">
+    <a href="tel:+918978972940" class="breakdown-call">📞 CALL NOW</a>
+    <div style="margin-top:12px;">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=13.5890046,78.4962174&travelmode=driving"
+         target="_blank"
+         rel="noopener"
+         class="breakdown-map"
+         style="display:inline-block;background:#fff;color:#016FB6;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;">
+         📍 GET DIRECTIONS
+      </a>
+    </div>
+    <div class="breakdown-number">+91 89789 72940</div>
+  </div>
+</section>
+
 
 <!-- ══ SERVICES ══ -->
 <section id="services">
@@ -538,56 +677,56 @@ footer{background:var(--albdp);padding:56px 48px 26px}
       <!-- Service images: real AL truck images showing different service angles -->
       <div class="svc-card reveal rd1">
         <div class="svc-img">
-          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp" alt="Periodic maintenance Ashok Leyland"/>
+          <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/avtr-1920-hg-1667974510.webp" alt="Periodic maintenance Ashok Leyland"/>
           <div class="svc-img-grad"></div>
         </div>
         <div class="svc-body"><h3>Periodic Maintenance</h3><p>Scheduled oil changes, filter replacements, belt inspections and full multi-point checks to AL factory specs.</p></div>
       </div>
       <div class="svc-card reveal rd2">
         <div class="svc-img">
-          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/4825-1674193295.webp" alt="Engine overhaul AVTR"/>
+          <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/4825-1674193295.webp" alt="Engine overhaul AVTR"/>
           <div class="svc-img-grad"></div>
         </div>
         <div class="svc-body"><h3>Engine Overhaul</h3><p>Complete iEGR/BS6 engine diagnostics, reconditioning and full rebuilds using OEM tooling and genuine AL components.</p></div>
       </div>
       <div class="svc-card reveal rd3">
         <div class="svc-img">
-          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/boss-1415-hb-1614071349.webp" alt="Transmission axle BOSS truck"/>
+          <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/boss-1415-hb-1614071349.webp" alt="Transmission axle BOSS truck"/>
           <div class="svc-img-grad"></div>
         </div>
         <div class="svc-body"><h3>Transmission & Axle</h3><p>Gearbox repair, differential service, axle shaft replacement and clutch system overhauls for all AL platforms.</p></div>
       </div>
       <div class="svc-card reveal rd4">
         <div class="svc-img">
-          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1920-hf-1671102506.webp" alt="Brake suspension 1920 HF"/>
+          <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1920-hf-1671102506.webp" alt="Brake suspension 1920 HF"/>
           <div class="svc-img-grad"></div>
         </div>
         <div class="svc-body"><h3>Brake & Suspension</h3><p>Air brake system overhaul, disc/drum replacement, suspension geometry correction and wheel alignment.</p></div>
       </div>
       <div class="svc-card reveal rd1">
         <div class="svc-img">
-          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1915-he-1693482164.webp" alt="Electrical diagnostics Ecomet"/>
+          <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/1915-he-1693482164.webp" alt="Electrical diagnostics Ecomet"/>
           <div class="svc-img-grad"></div>
         </div>
         <div class="svc-body"><h3>Electrical & Diagnostics</h3><p>ECU scanning, wiring harness repair, alternator/starter service and full AL proprietary diagnostic software checks.</p></div>
       </div>
       <div class="svc-card reveal rd2">
         <div class="svc-img">
-          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/partner-6-tyre-1614076276.webp" alt="Body chassis Partner truck"/>
+          <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/partner-6-tyre-1614076276.webp" alt="Body chassis Partner truck"/>
           <div class="svc-img-grad"></div>
         </div>
         <div class="svc-body"><h3>Body & Chassis</h3><p>Chassis straightening, anti-rust treatment, cabin panel repair, painting and structural integrity restoration.</p></div>
       </div>
       <div class="svc-card reveal rd3">
         <div class="svc-img">
-          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/taurus-3532-1769146071.webp" alt="Ashok Leyland TAURUS 3532 tipper"/>
+          <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/taurus-3532-1769146071.webp" alt="Ashok Leyland TAURUS 3532 tipper"/>
           <div class="svc-img-grad"></div>
         </div>
         <div class="svc-body"><h3>Fleet AMC Packages</h3><p>Annual Maintenance Contracts with priority slots, dedicated account managers and predictive maintenance scheduling.</p></div>
       </div>
       <div class="svc-card reveal rd4">
         <div class="svc-img">
-          <img src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/hippo-5536-6x4-1769147222.webp" alt="Ashok Leyland HIPPO 5536 6x4 tractor trailer"/>
+          <img loading="lazy" src="https://assets.tractorjunction.com/truck-junction/assets/images/truck/hippo-5536-6x4-1769147222.webp" alt="Ashok Leyland HIPPO 5536 6x4 tractor trailer"/>
           <div class="svc-img-grad"></div>
         </div>
         <div class="svc-body"><h3>24×7 Breakdown Support</h3><p>Round-the-clock emergency breakdown assistance across Madanapalle, Chittoor, Kurnool and surrounding districts.</p></div>
@@ -1014,7 +1153,7 @@ footer{background:var(--albdp);padding:56px 48px 26px}
           </div>
         </div>
      <a class="map-btn"
-   href="https://www.google.com/maps/dir/?api=1&destination=AMB+Motors+Ashok+Leyland+authorized+Service+center+Madanapalle"
+   href="https://www.google.com/maps/dir/?api=1&destination=13.5890046,78.4962174&travelmode=driving"
    target="_blank"
    rel="noopener">
 
@@ -1065,6 +1204,73 @@ footer{background:var(--albdp);padding:56px 48px 26px}
 </section>
 
 <!-- ══ FOOTER ══ -->
+
+<section style="background:#f5f8fc;padding:70px 48px">
+<div class="container">
+<div class="eyebrow">AMB Motors Advantage</div>
+<h2 class="sec-h">TRUSTED BY <span class="bl">FLEET OWNERS</span></h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin:25px 0 50px 0">
+<div class="stat-card">20,000+ Vehicles Serviced</div>
+<div class="stat-card">25+ Certified Technicians</div>
+<div class="stat-card">15+ Years Experience</div>
+<div class="stat-card">24×7 Breakdown Assistance</div>
+</div>
+
+<h2 class="sec-h">SERVICE <span class="bl">AREAS</span></h2>
+<p class="sec-p">Serving Madanapalle, Pileru, Punganur, Palamaner, Kadiri, Chintamani, V.Kota and surrounding regions within approximately 100 km.</p>
+
+<h2 class="sec-h" style="margin-top:40px">FLEET <span class="bl">MAINTENANCE PROGRAM</span></h2>
+<p class="sec-p">Priority service, AMC contracts, preventive maintenance, breakdown support and genuine Ashok Leyland spare parts for fleet operators.</p>
+
+<div style="margin-top:30px;background:#013660;color:#fff;padding:30px;border-radius:14px">
+<h3>Frequently Asked Questions</h3>
+<p>Do you provide 24/7 breakdown support? Yes.</p>
+<p>Do you stock genuine Ashok Leyland parts? Yes.</p>
+<p>Do you service buses, trucks and tippers? Yes.</p>
+</div>
+</div>
+</section>
+
+
+<section style="background:#f5f8fc;padding:70px 48px" id="fleet-owners">
+<div class="container">
+<div class="eyebrow">AMB Motors Advantage</div>
+<h2 class="sec-h">TRUSTED BY <span class="bl">FLEET OWNERS</span></h2>
+<p class="sec-p">Minimise downtime, maximise uptime and keep your Ashok Leyland fleet operating at peak efficiency with AMB Motors.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:40px">
+<div class="why-pt"><div class="why-n">01</div><div><h4>Priority Service</h4><p>Dedicated service support for fleet vehicles.</p></div></div>
+<div class="why-pt"><div class="why-n">02</div><div><h4>Genuine Parts</h4><p>OEM Ashok Leyland parts availability.</p></div></div>
+<div class="why-pt"><div class="why-n">03</div><div><h4>Reduced Downtime</h4><p>Faster diagnostics and repair turnaround.</p></div></div>
+<div class="why-pt"><div class="why-n">04</div><div><h4>AMC Support</h4><p>Custom maintenance packages for fleet operators.</p></div></div>
+</div>
+</div>
+</section>
+
+
+<section id="service-areas" style="background:#f5f8fc">
+<div class="container">
+<div class="eyebrow">Local Service Coverage</div>
+<h2 class="sec-h">SERVING <span class="bl">MADANAPALLE & SURROUNDING AREAS</span></h2>
+<p class="sec-p">
+AMB Motors provides Ashok Leyland authorised service, diagnostics, genuine spare parts,
+breakdown assistance and fleet maintenance support for customers from Madanapalle,
+Chittoor, Punganur, Palamaner, Kadiri, V.Kota, Chintamani and nearby locations.
+</p>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px">
+<div class="why-pt"><div><h4>Madanapalle</h4><p>Authorised Ashok Leyland workshop and spare parts support.</p></div></div>
+<div class="why-pt"><div><h4>Chittoor</h4><p>Commercial vehicle repairs, diagnostics and breakdown support.</p></div></div>
+<div class="why-pt"><div><h4>Punganur</h4><p>Truck service, maintenance and fleet support.</p></div></div>
+<div class="why-pt"><div><h4>Palamaner</h4><p>Heavy vehicle workshop and emergency roadside assistance.</p></div></div>
+<div class="why-pt"><div><h4>Kadiri</h4><p>Genuine parts and preventive maintenance programs.</p></div></div>
+<div class="why-pt"><div><h4>Pileru</h4><p>Ashok Leyland truck service, diagnostics and breakdown assistance.</p></div></div>
+<div class="why-pt"><div><h4>Rayachoty</h4><p>Commercial vehicle repairs, fleet maintenance and OEM spare parts.</p></div></div>
+<div class="why-pt"><div><h4>V.Kota</h4><p>Heavy vehicle workshop support and emergency roadside service.</p></div></div>
+</div>
+</div>
+</section>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -1106,7 +1312,7 @@ footer{background:var(--albdp);padding:56px 48px 26px}
       <ul>
         <li><a href="tel:+918978972940">📞 +91 89789 72940</a></li>
         <li><a href="https://wa.me/918978972940" target="_blank">💬 WhatsApp Us</a></li>
-        <li><a href="https://maps.app.goo.gl/UGYcSDFKhPtGBYEr6?g_st=ac" target="_blank">📍 NH-42, Madanapalle 517325</a></li>
+        <li><a href="https://www.google.com/maps/dir/?api=1&destination=13.5890046,78.4962174&travelmode=driving" target="_blank">📍 NH-42, Madanapalle 517325</a></li>
         <li><a href="mailto:service@ambmotors.in">✉ service@ambmotors.in</a></li>
         <li><a href="#">⏰ Mon–Sat 8AM – 7PM</a></li>
         <li><a href="#spares">🔩 Order Spare Parts</a></li>
@@ -1179,5 +1385,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   });
 });
 </script>
+
+
+<div class="mobile-emergency-bar">
+  <div class="emergency-title">🚚 24/7 BREAKDOWN ASSISTANCE<p>Highway Emergency Support for Ashok Leyland Trucks, Tippers, Buses and Commercial Vehicles </p> </div>
+ <!-- <div class="emergency-actions">
+    <a href="tel:+918978972940">📞 CALL NOW</a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=13.5890046,78.4962174&travelmode=driving" target="_blank">📍 DIRECTIONS</a>
+  </div> -->
+</div>
+
 </body>
 </html>
