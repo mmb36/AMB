@@ -628,7 +628,7 @@ html,body{overflow-x:hidden;width:100%}
   <div class="c-arr p" onclick="mvSlide(-1)" aria-label="Previous">
     <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
   </div>
-  <div class="c-arr n" onclick="mvSlide(1)" aria-label="Next">
+  <div class="c-arr n" id="nextSlideBtn" aria-label="Next">
     <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
   </div>
   <div class="c-dots" id="cDots">
@@ -1365,7 +1365,17 @@ function goSlide(n){
   track.style.transform=`translateX(-${cur*100}%)`;
   resetBar();
 }
-function mvSlide(d){goSlide(cur+d)}
+function mvSlide(d){
+  goSlide(cur+d);
+  startAuto();
+}
+
+document.querySelectorAll('.cdot').forEach((dot,i)=>{
+  dot.onclick=function(){
+    goSlide(i);
+    startAuto();
+  };
+});
 function startAuto(){clearInterval(autoT);autoT=setInterval(()=>goSlide(cur+1),DELAY)}
 function resetBar(){
   bar.style.transition='none';bar.style.width='0%';
@@ -1378,7 +1388,23 @@ hw.addEventListener('mouseenter',()=>{clearInterval(autoT);bar.style.transition=
 hw.addEventListener('mouseleave',()=>{startAuto();resetBar()});
 let tx=0;
 hw.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
-hw.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>40)goSlide(cur+(d>0?1:-1))},{passive:true});
+hw.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>40){goSlide(cur+(d>0?1:-1));startAuto();}},{passive:true});
+
+let nextButtonTap = false;
+const nextBtn=document.getElementById('nextSlideBtn');
+if(nextBtn){
+  nextBtn.addEventListener('touchstart',function(){
+    nextButtonTap = true;
+},{passive:true});
+
+nextBtn.addEventListener('click',function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    mvSlide(1);
+    setTimeout(()=>{ nextButtonTap = false; },300);
+},false);
+}
+
 startAuto();resetBar();
 
 // ── SCROLL REVEAL ──
@@ -1424,6 +1450,7 @@ const hero=document.getElementById('heroWrap');
 hero.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;},{passive:true});
 hero.addEventListener('touchmove',e=>{moveX=e.touches[0].clientX;},{passive:true});
 hero.addEventListener('touchend',()=>{
+    if(nextButtonTap) return;
  const diff=startX-moveX;
  if(Math.abs(diff)>50){
    if(typeof mvSlide==='function'){ mvSlide(diff>0?1:-1); }
