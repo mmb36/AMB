@@ -452,6 +452,25 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 
+
+<style id="hero-mobile-carousel-fix">
+html,body{overflow-x:hidden;width:100%}
+.hero,.c-track,.cslide{max-width:100vw}
+@media (max-width:768px){
+.hero{height:420px!important;overflow:hidden}
+.c-track{display:flex;height:100%;will-change:transform;transform:translate3d(0,0,0);backface-visibility:hidden}
+.cslide{min-width:100%;width:100%;position:relative;overflow:hidden}
+.cslide img{width:100%;height:100%;object-fit:cover;object-position:center}
+.c-content{padding:0 20px!important;max-width:100%!important;width:100%!important}
+.c-h1{font-size:42px!important;line-height:.9}
+.c-p{font-size:14px;max-width:260px;line-height:1.5}
+.c-btns{flex-direction:column;align-items:flex-start;gap:10px}
+.c-arr{width:44px;height:44px}
+.c-arr.p{left:8px}.c-arr.n{right:8px}
+.c-dots{bottom:15px}
+}
+</style>
+
 </head>
 <body>
 
@@ -1394,6 +1413,24 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     <a href="https://www.google.com/maps/dir/?api=1&destination=13.5890046,78.4962174&travelmode=driving" target="_blank">📍 DIRECTIONS</a>
   </div> -->
 </div>
+
+
+<script>
+(function(){
+const track=document.getElementById('cTrack');
+if(!track) return;
+let startX=0, moveX=0;
+const hero=document.getElementById('heroWrap');
+hero.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;},{passive:true});
+hero.addEventListener('touchmove',e=>{moveX=e.touches[0].clientX;},{passive:true});
+hero.addEventListener('touchend',()=>{
+ const diff=startX-moveX;
+ if(Math.abs(diff)>50){
+   if(typeof mvSlide==='function'){ mvSlide(diff>0?1:-1); }
+ }
+},{passive:true});
+})();
+</script>
 
 </body>
 </html>
