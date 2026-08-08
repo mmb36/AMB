@@ -140,6 +140,12 @@ h2{font:800 clamp(32px,4vw,48px)/1 Manrope,sans-serif;letter-spacing:-.045em}
 .field.full{grid-column:1/-1}
 label{display:block;font-size:10px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
 input,select,textarea{width:100%;border:1px solid var(--line);background:#fbfcfd;border-radius:9px;padding:11px 12px;font:400 13px Inter;color:var(--ink);outline:0}
+.phone-field{display:flex;align-items:stretch;width:100%;border:1px solid var(--line);background:#fbfcfd;border-radius:9px;overflow:hidden;transition:.18s ease}
+.phone-field:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px rgba(8,117,189,.09)}
+.phone-prefix{display:flex;align-items:center;padding:0 12px;font:800 13px Inter;color:#17344a;background:#eef4f8;border-right:1px solid var(--line);user-select:none;flex:0 0 auto}
+.phone-field input{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;min-width:0}
+.phone-field input:focus{outline:0}
+
 input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(8,117,189,.09)}
 textarea{min-height:100px;resize:vertical}
 .contact{background:var(--bg)}
@@ -543,7 +549,7 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
         <h3>Service request</h3>
         <div class="form-grid">
           <div class="field"><label>Name *</label><input id="name" required placeholder="Your name"></div>
-          <div class="field"><label>Phone *</label><input id="phone" required type="tel" placeholder="+91"></div>
+          <div class="field"><label>Phone *</label><div class="phone-field"><span class="phone-prefix" aria-hidden="true">+91</span><input id="phone" required type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="10-digit mobile number" aria-label="10-digit mobile number"></div></div>
           <div class="field"><label>Vehicle</label><input id="vehicle" placeholder="Truck / Bus / Model"></div>
           <div class="field"><label>Service</label><select id="service"><option>Periodic Maintenance</option><option>Engine / Major Repair</option><option>Transmission / Axle</option><option>Brakes / Suspension</option><option>Electrical Diagnostics</option><option>Spare Parts</option><option>Fleet / AMC</option><option>Breakdown Assistance</option></select></div>
           <div class="field full"><label>Requirement</label><textarea id="message" placeholder="Briefly describe the issue or service required"></textarea></div>
@@ -603,9 +609,15 @@ document.querySelectorAll('#tabs button').forEach(btn=>btn.addEventListener('cli
  document.querySelectorAll('.vehicle-card').forEach(card=>card.style.display=filter==='all'||card.dataset.cat===filter?'':'none');
 }));
 
+const phoneInput=document.getElementById('phone');
+phoneInput.addEventListener('input',()=>{ phoneInput.value=phoneInput.value.replace(/\D/g,'').slice(0,10); });
+phoneInput.addEventListener('paste',()=>setTimeout(()=>{ phoneInput.value=phoneInput.value.replace(/\D/g,'').slice(0,10); },0));
+
 document.getElementById('serviceForm').addEventListener('submit',e=>{
  e.preventDefault();
- const name=document.getElementById('name').value.trim(),phone=document.getElementById('phone').value.trim(),vehicle=document.getElementById('vehicle').value.trim(),service=document.getElementById('service').value,issue=document.getElementById('message').value.trim();
+ const name=document.getElementById('name').value.trim(),phoneDigits=document.getElementById('phone').value.replace(/\D/g,'').slice(0,10),vehicle=document.getElementById('vehicle').value.trim(),service=document.getElementById('service').value,issue=document.getElementById('message').value.trim();
+ if(phoneDigits.length!==10){ alert('Please enter a valid 10-digit mobile number after +91.'); document.getElementById('phone').focus(); return; }
+ const phone='+91 '+phoneDigits;
  const text=`Hello AMB MOTORS,\n\nI would like to request vehicle service.\nName: ${name}\nPhone: ${phone}\nVehicle: ${vehicle||'Not specified'}\nService: ${service}\nRequirement: ${issue||'Not specified'}`;
  window.open('https://wa.me/918978972940?text='+encodeURIComponent(text),'_blank');
 });
