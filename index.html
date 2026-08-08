@@ -187,6 +187,141 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
 @media(max-width:620px){#why .why-list{grid-template-columns:1fr;gap:14px}#why .why-item{min-height:285px}#why .why-image{height:112px}#why .why-copy{padding:19px 19px 15px}}
 </style>
 
+
+<style>
+/* 24/7 Breakdown Assistance — premium emergency support section */
+.breakdown-section{
+  padding:72px 0;
+  background:linear-gradient(135deg,#f4f9fd 0%,#ffffff 52%,#eef7fc 100%);
+}
+.breakdown-card{
+  position:relative;
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  min-height:360px;
+  overflow:hidden;
+  border-radius:22px;
+  background:linear-gradient(125deg,#062b49 0%,#0875bd 100%);
+  box-shadow:0 22px 55px rgba(8,117,189,.16);
+}
+.breakdown-copy{
+  position:relative;
+  z-index:2;
+  padding:42px 42px 38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.breakdown-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  width:max-content;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.breakdown-badge i{
+  width:7px;height:7px;border-radius:50%;
+  background:#ff6b00;
+  box-shadow:0 0 0 4px rgba(255,107,0,.14);
+}
+.breakdown-copy h2{
+  color:#fff;
+  font:800 clamp(32px,4vw,48px)/1.02 Manrope,sans-serif;
+  letter-spacing:-.045em;
+  margin:18px 0 12px;
+  max-width:520px;
+}
+.breakdown-copy h2 span{color:#72c9f7}
+.breakdown-copy p{
+  max-width:500px;
+  color:rgba(255,255,255,.76);
+  font-size:14px;
+  line-height:1.75;
+}
+.breakdown-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:24px;
+}
+.breakdown-actions .btn{
+  min-height:44px;
+}
+.breakdown-image{
+  position:relative;
+  min-height:360px;
+  overflow:hidden;
+}
+.breakdown-image:before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:linear-gradient(90deg,rgba(6,43,73,.72) 0%,rgba(6,43,73,.18) 42%,rgba(6,43,73,.04) 100%);
+}
+.breakdown-image:after{
+  content:"24/7";
+  position:absolute;
+  z-index:2;
+  right:22px;
+  top:22px;
+  padding:9px 12px;
+  border-radius:10px;
+  background:rgba(255,255,255,.92);
+  color:#0875bd;
+  font:900 14px Manrope,sans-serif;
+  letter-spacing:.03em;
+  box-shadow:0 8px 22px rgba(0,0,0,.14);
+}
+.breakdown-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 52%;
+  transition:transform .5s ease;
+}
+.breakdown-card:hover .breakdown-image img{transform:scale(1.025)}
+.breakdown-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+.breakdown-points span{
+  padding:7px 10px;
+  border-radius:8px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.11);
+  color:rgba(255,255,255,.82);
+  font-size:10px;
+  font-weight:800;
+}
+@media(max-width:800px){
+  .breakdown-card{grid-template-columns:1fr}
+  .breakdown-copy{padding:34px 30px}
+  .breakdown-image{min-height:270px;order:-1}
+  .breakdown-image:before{background:linear-gradient(180deg,rgba(6,43,73,.05),rgba(6,43,73,.58))}
+}
+@media(max-width:620px){
+  .breakdown-section{padding:54px 0}
+  .breakdown-copy{padding:28px 22px 26px}
+  .breakdown-copy h2{font-size:34px}
+  .breakdown-copy p{font-size:13px}
+  .breakdown-image{min-height:220px}
+  .breakdown-image:after{right:14px;top:14px}
+  .breakdown-actions{display:grid;grid-template-columns:1fr}
+  .breakdown-actions .btn{width:100%}
+}
+</style>
+
 </head>
 
 <body>
@@ -246,6 +381,40 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
   </div>
 </div>
 
+
+<section class="breakdown-section" id="breakdown">
+  <div class="container">
+    <div class="breakdown-card">
+      <div class="breakdown-copy">
+        <div class="breakdown-badge"><i></i> Emergency Roadside Support</div>
+        <h2>24/7 <span>Breakdown Assistance</span></h2>
+        <p>When a commercial vehicle stops on the road, quick support matters. Contact AMB MOTORS for highway emergency assistance for trucks, tippers, buses and commercial vehicles.</p>
+        <div class="breakdown-points">
+          <span>Emergency Support</span>
+          <span>Commercial Vehicles</span>
+          <span>Highway Assistance</span>
+          <span>Less Downtime</span>
+        </div>
+        <div class="breakdown-actions">
+          <a class="btn btn-light" href="tel:+918978972940">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3c.7-.1 1.3.3 1.5 1l1 3c.2.6 0 1.2-.5 1.6l-1.7 1.3a14.6 14.6 0 0 0 4.8 4.8l1.3-1.7c.4-.5 1-.7 1.6-.5l3 1c.7.2 1.1.8 1 1.5l-.5 2.4c-.2 1-1.1 1.7-2.1 1.7C10.5 19.1 4.9 13.5 4.9 6.6c0-1 .7-1.9 1.7-2.1Z" fill="currentColor"/></svg>
+            Call +91 8978972940
+          </a>
+          <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/918978972940?text=Hello%20AMB%20Motors%2C%20I%20need%2024%2F7%20breakdown%20assistance.">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.3 9.3 0 0 0-8 14.1L3 21l4.6-1a9.3 9.3 0 1 0 4.4-17.5Z" fill="currentColor"/><path d="M8.2 7.3c.2-.4.4-.4.8-.4h.7c.2 0 .4.1.5.4l.9 2.1c.1.3.1.5-.1.7l-.7.8c.6 1.1 1.5 2 2.6 2.6l.8-.7c.2-.2.4-.2.7-.1l2.1.9c.3.1.4.3.4.5v.7c0 .4 0 .6-.4.8-.5.3-1.1.5-1.7.4-3.7-.5-6.8-3.6-7.3-7.3-.1-.6.1-1.2.4-1.7Z" fill="#fff"/></svg>
+            WhatsApp Assistance
+          </a>
+        </div>
+      </div>
+      <div class="breakdown-image">
+        <img src="https://www.crossroadshelpline.com/_next/image?q=75&url=https%3A%2F%2Fapiblog.crossroadshelpline.com%2Fwp-content%2Fuploads%2F2026%2F02%2FChatGPT-Image-Feb-18-2026-11_09_20-AM-1024x683.png&w=3840"
+             alt="Professional roadside technicians diagnosing and repairing a disabled commercial truck on a highway"
+             loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="services">
   <div class="container">
     <div class="section-head"><div><div class="eyebrow">What we do</div><h2>Service that keeps business moving.</h2></div><p>Focused commercial vehicle support without unnecessary complexity — routine maintenance, diagnostics, repairs and emergency assistance.</p></div>
@@ -275,7 +444,6 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
         <div class="service-body"><div class="service-icon">▰</div><h3>Fleet & AMC Support</h3><p>Planned maintenance and priority support for commercial vehicle fleets.</p></div>
       </article>
     </div>
-    <div class="breakdown"><div><h3>24/7 Breakdown Assistance</h3><p>Highway emergency support for trucks, tippers, buses and commercial vehicles.</p></div><a class="btn btn-light" href="tel:+918978972940">📞 Call +91 8978972940</a></div>
   </div>
 </section>
 
