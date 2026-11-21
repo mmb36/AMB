@@ -141,7 +141,7 @@ h2{font:800 clamp(32px,4vw,48px)/1 Manrope,sans-serif;letter-spacing:-.045em}
 .form,.contact{border:1px solid var(--line);border-radius:18px;padding:26px;background:#fff}
 .form h3,.contact h3{font:800 22px Manrope,sans-serif;margin-bottom:18px}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.field.full{grid-column:1/-1}
+.field.full{grid-column:1/-1}.phone-numbers{display:flex;align-items:center;gap:9px;white-space:nowrap;flex-wrap:nowrap;font-size:inherit}.phone-numbers a{color:inherit;text-decoration:none}.phone-numbers span{opacity:.55}.attachment-help{display:block;margin-top:7px;color:var(--muted);font-size:12px;line-height:1.5}
 label{display:block;font-size:10px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
 input,select,textarea{width:100%;border:1px solid var(--line);background:#fbfcfd;border-radius:9px;padding:11px 12px;font:400 13px Inter;color:var(--ink);outline:0}
 .phone-field{display:flex;align-items:stretch;width:100%;border:1px solid var(--line);background:#fbfcfd;border-radius:9px;overflow:hidden;transition:.18s ease}
@@ -388,7 +388,7 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
       <div><div class="brand-name">AMB MOTORS</div><div class="brand-sub">Ashok Leyland Authorised Service</div></div>
     </a>
     <nav class="nav-links">
-      <a href="#services">Services</a><a href="#vehicles">Vehicles</a><a href="#spares">Genuine Parts</a><a href="#why">Why AMB</a><a href="#gallery">Gallery</a><a class="nav-cta" href="#booking">Book Service</a>
+      <a href="#services">Services</a><a href="#vehicles">Vehicles</a><a href="#spares">Genuine Parts</a><a href="#why">Why AMB</a><a href="#gallery">Gallery</a><a href="#careers">Careers</a><a class="nav-cta" href="#booking">Book Service</a>
     </nav>
     <button class="menu" id="menu" aria-label="Open menu">☰</button>
   </div>
@@ -431,7 +431,7 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
 
 <div class="quick">
   <div class="container quick-grid">
-    <a class="quick-item" href="tel:+918978972940"><div class="quick-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3c.7-.1 1.3.3 1.5 1l1 3c.2.6 0 1.2-.5 1.6l-1.7 1.3a14.6 14.6 0 0 0 4.8 4.8l1.3-1.7c.4-.5 1-.7 1.6-.5l3 1c.7.2 1.1.8 1 1.5l-.5 2.4c-.2 1-1.1 1.7-2.1 1.7C10.5 19.1 4.9 13.5 4.9 6.6c0-1 .7-1.9 1.7-2.1Z" fill="currentColor"/></svg></div><div><small>Call AMB MOTORS</small><strong>+91 8978972940</strong></div></a>
+    <a class="quick-item" href="tel:+918978972940"><div class="quick-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3c.7-.1 1.3.3 1.5 1l1 3c.2.6 0 1.2-.5 1.6l-1.7 1.3a14.6 14.6 0 0 0 4.8 4.8l1.3-1.7c.4-.5 1-.7 1.6-.5l3 1c.7.2 1.1.8 1 1.5l-.5 2.4c-.2 1-1.1 1.7-2.1 1.7C10.5 19.1 4.9 13.5 4.9 6.6c0-1 .7-1.9 1.7-2.1Z" fill="currentColor"/></svg></div><div><small>Call AMB MOTORS</small><strong class="phone-numbers"><a href="tel:+918978972940">+91 8978972940</a><span>|</span><a href="tel:+918977369131">+91 8977369131</a></strong></div></a>
     <a class="quick-item" target="_blank" rel="noopener" href="https://wa.me/918978972940"><div class="quick-icon" style="color:#16a34a;background:#eafbf0;border-color:#c9f1d6"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.3 9.3 0 0 0-8 14.1L3 21l4.6-1a9.3 9.3 0 1 0 4.4-17.5Z" fill="currentColor"/><path d="M8.2 7.3c.2-.4.4-.4.8-.4h.7c.2 0 .4.1.5.4l.9 2.1c.1.3.1.5-.1.7l-.7.8c.6 1.1 1.5 2 2.6 2.6l.8-.7c.2-.2.4-.2.7-.1l2.1.9c.3.1.4.3.4.5v.7c0 .4 0 .6-.4.8-.5.3-1.1.5-1.7.4-3.7-.5-6.8-3.6-7.3-7.3-.1-.6.1-1.2.4-1.7Z" fill="#fff"/></svg></div><div><small>WhatsApp</small><strong>Message us directly</strong></div></a>
     <a class="quick-item" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=13.5890046,78.4962174&travelmode=driving"><div class="quick-icon" style="color:#d93025;background:#fff0f0;border-color:#ffd4d4"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12A7 7 0 1 0 5 9c0 5.8 7 12 7 12Z" fill="currentColor"/><circle cx="12" cy="9" r="2.7" fill="#fff"/></svg></div><div><small>Workshop</small><strong>NH-42, Ammacheruvu Mitta, Madanapalle</strong></div></a>
   </div>
@@ -594,6 +594,9 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
   </div>
 </section>
 
+
+
+
 <section id="booking">
   <div class="container">
     <div class="section-head"><div><div class="eyebrow">Contact & booking</div><h2>Tell us what your vehicle needs.</h2></div><p>Keep the form short. On submit, the request opens in WhatsApp so the customer can send it directly to AMB MOTORS.</p></div>
@@ -612,14 +615,39 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
       <aside class="contact">
         <h3>AMB MOTORS</h3>
         <div class="contact-row"><div class="contact-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12A7 7 0 1 0 5 9c0 5.8 7 12 7 12Z" fill="currentColor"/><circle cx="12" cy="9" r="2.7" fill="#fff"/></svg></div><div><small>Workshop</small><strong>NH-42, Ammacheruvu Mitta, Madanapalle, Annamayya Dist., Andhra Pradesh – 517325</strong></div></div>
-        <div class="contact-row"><div class="contact-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3c.7-.1 1.3.3 1.5 1l1 3c.2.6 0 1.2-.5 1.6l-1.7 1.3a14.6 14.6 0 0 0 4.8 4.8l1.3-1.7c.4-.5 1-.7 1.6-.5l3 1c.7.2 1.1.8 1 1.5l-.5 2.4c-.2 1-1.1 1.7-2.1 1.7C10.5 19.1 4.9 13.5 4.9 6.6c0-1 .7-1.9 1.7-2.1Z" fill="currentColor"/></svg></div><div><small>Phone</small><a href="tel:+918978972940"><strong>+91 8978972940</strong></a></div></div>
-        <div class="contact-row"><div class="contact-icon">✉</div><div><small>Email</small><a href="mailto:contact@ambmotors.in"><strong>contact@ambmotors.in</strong></a></div></div>
+        <div class="contact-row"><div class="contact-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3c.7-.1 1.3.3 1.5 1l1 3c.2.6 0 1.2-.5 1.6l-1.7 1.3a14.6 14.6 0 0 0 4.8 4.8l1.3-1.7c.4-.5 1-.7 1.6-.5l3 1c.7.2 1.1.8 1 1.5l-.5 2.4c-.2 1-1.1 1.7-2.1 1.7C10.5 19.1 4.9 13.5 4.9 6.6c0-1 .7-1.9 1.7-2.1Z" fill="currentColor"/></svg></div><div><small>Phone</small><strong class="phone-numbers"><a href="tel:+918978972940">+91 8978972940</a><span>|</span><a href="tel:+918977369131">+91 8977369131</a></strong></div></div>\n        <div class="contact-row"><div class="contact-icon">✉</div><div><small>Email</small><a href="mailto:contact@ambmotors.in"><strong>contact@ambmotors.in</strong></a></div></div>
         <div class="contact-row"><div class="contact-icon">◷</div><div><small>Hours</small><strong>Mon–Sat · 8:00 AM – 7:00 PM</strong></div></div>
         <div class="actions"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=13.5890046,78.4962174&travelmode=driving"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12A7 7 0 1 0 5 9c0 5.8 7 12 7 12Z" fill="currentColor"/><circle cx="12" cy="9" r="2.7" fill="#fff"/></svg> Get Directions</a><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/918978972940"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.3 9.3 0 0 0-8 14.1L3 21l4.6-1a9.3 9.3 0 1 0 4.4-17.5Z" fill="currentColor"/><path d="M8.2 7.3c.2-.4.4-.4.8-.4h.7c.2 0 .4.1.5.4l.9 2.1c.1.3.1.5-.1.7l-.7.8c.6 1.1 1.5 2 2.6 2.6l.8-.7c.2-.2.4-.2.7-.1l2.1.9c.3.1.4.3.4.5v.7c0 .4 0 .6-.4.8-.5.3-1.1.5-1.7.4-3.7-.5-6.8-3.6-7.3-7.3-.1-.6.1-1.2.4-1.7Z" fill="#fff"/></svg> WhatsApp</a></div>
       </aside>
     </div>
   </div>
 <p class="seo-support-text">Our planned service and AMC options provide practical <strong>fleet maintenance in Madanapalle</strong> for commercial vehicle operators.</p>
+</section>
+
+<section id="careers">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Careers at AMB MOTORS</div><h2>Tell us about yourself.</h2></div><p>Interested in working with AMB MOTORS? Share your details and the position you are applying for. Your application will open in WhatsApp for you to send directly to our team.</p></div>
+    <div class="booking-grid">
+      <form class="form" id="jobApplicationForm">
+        <h3>Job application</h3>
+        <div class="form-grid">
+          <div class="field"><label>Full Name *</label><input id="applicantName" required placeholder="Your full name"></div>
+          <div class="field"><label>Phone *</label><div class="phone-field"><span class="phone-prefix" aria-hidden="true">+91</span><input id="applicantPhone" required type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="10-digit mobile number" aria-label="10-digit mobile number"></div></div>
+          <div class="field"><label>Email</label><input id="applicantEmail" type="email" placeholder="Your email address"></div>
+          <div class="field"><label>Position Applying For *</label><input id="applicantPosition" required placeholder="Enter the job position"></div>
+          <div class="field full"><label>Message</label><textarea id="applicantMessage" placeholder="Briefly tell us about your interest and relevant experience"></textarea></div>
+          <div class="field full"><label for="applicantAttachment">Attach Resume / CV or Supporting Documents</label><input id="applicantAttachment" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" multiple><small class="attachment-help">You can attach PDF, Word or image files. Maximum 10 MB per file.</small></div>
+          <div class="field full"><button class="btn btn-primary" style="width:100%;cursor:pointer;border:0" type="submit">Submit Job Application →</button></div>
+        </div>
+      </form>
+      <aside class="contact">
+        <h3>Join AMB MOTORS</h3>
+        <div class="contact-row"><div class="contact-icon">✦</div><div><small>Work with us</small><strong>Be part of our commercial vehicle service team.</strong></div></div>
+        <div class="contact-row"><div class="contact-icon">☎</div><div><small>Contact</small><strong class="phone-numbers"><a href="tel:+918978972940">+91 8978972940</a><span>|</span><a href="tel:+918977369131">+91 8977369131</a></strong></div></div>
+        <div class="contact-row"><div class="contact-icon">✉</div><div><small>Email</small><a href="mailto:contact@ambmotors.in"><strong>contact@ambmotors.in</strong></a></div></div>
+      </aside>
+    </div>
+  </div>
 </section>
 </main>
 
@@ -630,7 +658,7 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
         <div class="brand"><img src="./logo.png" alt="AMB MOTORS"><div><div class="brand-name" style="color:#fff">AMB MOTORS</div><div class="brand-sub" style="color:rgba(255,255,255,.5)">Ashok Leyland Authorised Service</div></div></div>
         <p>NH-42, Ammacheruvu Mitta, Madanapalle, Annamayya Dist., Andhra Pradesh – 517325.</p>
       </div>
-      <div class="footer-links"><a href="#services">Services</a><a href="#vehicles">Vehicles</a><a href="#spares">Genuine Parts</a><a href="#booking">Contact</a><a href="https://www.ambmotors.in">Website</a></div>
+      <div class="footer-links"><a href="#services">Services</a><a href="#vehicles">Vehicles</a><a href="#spares">Genuine Parts</a><a href="#careers">Careers</a><a href="#booking">Contact</a><a href="https://www.ambmotors.in">Website</a></div>
     </div>
     <div class="footer-bottom"><span>© 2026 AMB MOTORS. All rights reserved.</span><span>Driven by Excellence. Powered by Trust.</span></div>
   </div>
@@ -667,6 +695,34 @@ const phoneInput=document.getElementById('phone');
 phoneInput.addEventListener('input',()=>{ phoneInput.value=phoneInput.value.replace(/\D/g,'').slice(0,10); });
 phoneInput.addEventListener('paste',()=>setTimeout(()=>{ phoneInput.value=phoneInput.value.replace(/\D/g,'').slice(0,10); },0));
 
+const applicantPhoneInput=document.getElementById('applicantPhone');
+applicantPhoneInput.addEventListener('input',()=>{ applicantPhoneInput.value=applicantPhoneInput.value.replace(/\D/g,'').slice(0,10); });
+applicantPhoneInput.addEventListener('paste',()=>setTimeout(()=>{ applicantPhoneInput.value=applicantPhoneInput.value.replace(/\D/g,'').slice(0,10); },0));
+
+document.getElementById('jobApplicationForm').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const name=document.getElementById('applicantName').value.trim();
+ const phoneDigits=document.getElementById('applicantPhone').value.replace(/\D/g,'').slice(0,10);
+ const email=document.getElementById('applicantEmail').value.trim();
+ const position=document.getElementById('applicantPosition').value.trim();
+ const message=document.getElementById('applicantMessage').value.trim();
+ const files=[...document.getElementById('applicantAttachment').files];
+ if(phoneDigits.length!==10){ alert('Please enter a valid 10-digit mobile number after +91.'); applicantPhoneInput.focus(); return; }
+ if(files.some(file=>file.size>10*1024*1024)){ alert('Each attachment must be 10 MB or smaller. Please choose smaller files.'); return; }
+ const applicantPhone='+91 '+phoneDigits;
+ const applicationText=`Hello AMB MOTORS,\n\nI would like to apply for a job.\nName: ${name}\nPhone: ${applicantPhone}\nEmail: ${email||'Not provided'}\nPosition: ${position}\nMessage: ${message||'Not provided'}\nAttachments: ${files.length ? files.map(file=>file.name).join(', ') : 'None'}`;
+ if(files.length && navigator.canShare && navigator.share){
+   const shareData={title:'AMB MOTORS Job Application',text:applicationText,files};
+   if(navigator.canShare(shareData)){
+     try{ await navigator.share(shareData); }
+     catch(err){ if(err.name!=='AbortError') alert('Unable to open the share option. Please try again or use WhatsApp and attach your file manually.'); }
+     return;
+   }
+ }
+ const waUrl='https://wa.me/918978972940?text='+encodeURIComponent(applicationText);
+ window.open(waUrl,'_blank');
+ if(files.length){ alert('Your application message has opened in WhatsApp. For security reasons, this browser cannot attach files automatically. Please attach the selected resume/document in the WhatsApp chat before sending.'); }
+});
 document.getElementById('serviceForm').addEventListener('submit',e=>{
  e.preventDefault();
  const name=document.getElementById('name').value.trim(),phoneDigits=document.getElementById('phone').value.replace(/\D/g,'').slice(0,10),vehicle=document.getElementById('vehicle').value.trim(),service=document.getElementById('service').value,issue=document.getElementById('message').value.trim();
