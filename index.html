@@ -183,6 +183,11 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
 .def-badge{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);padding:6px 10px;border-radius:999px;background:#f58220;color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;white-space:nowrap;box-shadow:0 5px 18px rgba(0,0,0,.18);}
 @media(max-width:700px){.def-half{min-height:150px}.def-badge{font-size:9px;padding:5px 8px}}
 
+
+/* Supporting fleet-maintenance copy below the service booking form */
+.seo-support-text{max-width:900px;margin:28px auto 0;padding:15px 22px;text-align:center;background:var(--blue-soft);border:1px solid #dcecf7;border-left:4px solid var(--blue);border-radius:10px;color:#425568;font-size:13px;line-height:1.75}
+.seo-support-text strong{color:var(--blue-dark);font-weight:800}
+@media(max-width:620px){.seo-support-text{margin-top:22px;padding:13px 15px;font-size:12px;text-align:left}}
 </style>
 
 <style>
@@ -620,8 +625,8 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
         <div class="actions"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=13.5890046,78.4962174&travelmode=driving"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12A7 7 0 1 0 5 9c0 5.8 7 12 7 12Z" fill="currentColor"/><circle cx="12" cy="9" r="2.7" fill="#fff"/></svg> Get Directions</a><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/918978972940"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.3 9.3 0 0 0-8 14.1L3 21l4.6-1a9.3 9.3 0 1 0 4.4-17.5Z" fill="currentColor"/><path d="M8.2 7.3c.2-.4.4-.4.8-.4h.7c.2 0 .4.1.5.4l.9 2.1c.1.3.1.5-.1.7l-.7.8c.6 1.1 1.5 2 2.6 2.6l.8-.7c.2-.2.4-.2.7-.1l2.1.9c.3.1.4.3.4.5v.7c0 .4 0 .6-.4.8-.5.3-1.1.5-1.7.4-3.7-.5-6.8-3.6-7.3-7.3-.1-.6.1-1.2.4-1.7Z" fill="#fff"/></svg> WhatsApp</a></div>
       </aside>
     </div>
+    <p class="seo-support-text">Our planned maintenance and AMC packages deliver reliable, cost-effective <strong>fleet maintenance in Madanapalle</strong> for commercial vehicle operators.</p>
   </div>
-<p class="seo-support-text">Our planned service and AMC options provide practical <strong>fleet maintenance in Madanapalle</strong> for commercial vehicle operators.</p>
 </section>
 
 <section id="careers">
@@ -637,7 +642,7 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
           <div class="field"><label>Position Applying For *</label><input id="applicantPosition" required placeholder="Enter the job position"></div>
           <div class="field full"><label>Message</label><textarea id="applicantMessage" placeholder="Briefly tell us about your interest and relevant experience"></textarea></div>
           <div class="field full"><label for="applicantAttachment">Attach Resume / CV or Supporting Documents</label><input id="applicantAttachment" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" multiple><small class="attachment-help">You can attach PDF, Word or image files. Maximum 10 MB per file.</small></div>
-          <div class="field full"><button class="btn btn-primary" style="width:100%;cursor:pointer;border:0" type="submit">Submit Job Application →</button></div>
+          <div class="field full"><button class="btn btn-primary" style="width:100%;cursor:pointer;border:0" type="submit">Submit Job Application on WhatsApp →</button></div>
         </div>
       </form>
       <aside class="contact">
@@ -699,7 +704,7 @@ const applicantPhoneInput=document.getElementById('applicantPhone');
 applicantPhoneInput.addEventListener('input',()=>{ applicantPhoneInput.value=applicantPhoneInput.value.replace(/\D/g,'').slice(0,10); });
 applicantPhoneInput.addEventListener('paste',()=>setTimeout(()=>{ applicantPhoneInput.value=applicantPhoneInput.value.replace(/\D/g,'').slice(0,10); },0));
 
-document.getElementById('jobApplicationForm').addEventListener('submit',async e=>{
+document.getElementById('jobApplicationForm').addEventListener('submit',e=>{
  e.preventDefault();
  const name=document.getElementById('applicantName').value.trim();
  const phoneDigits=document.getElementById('applicantPhone').value.replace(/\D/g,'').slice(0,10);
@@ -711,17 +716,11 @@ document.getElementById('jobApplicationForm').addEventListener('submit',async e=
  if(files.some(file=>file.size>10*1024*1024)){ alert('Each attachment must be 10 MB or smaller. Please choose smaller files.'); return; }
  const applicantPhone='+91 '+phoneDigits;
  const applicationText=`Hello AMB MOTORS,\n\nI would like to apply for a job.\nName: ${name}\nPhone: ${applicantPhone}\nEmail: ${email||'Not provided'}\nPosition: ${position}\nMessage: ${message||'Not provided'}\nAttachments: ${files.length ? files.map(file=>file.name).join(', ') : 'None'}`;
- if(files.length && navigator.canShare && navigator.share){
-   const shareData={title:'AMB MOTORS Job Application',text:applicationText,files};
-   if(navigator.canShare(shareData)){
-     try{ await navigator.share(shareData); }
-     catch(err){ if(err.name!=='AbortError') alert('Unable to open the share option. Please try again or use WhatsApp and attach your file manually.'); }
-     return;
-   }
- }
  const waUrl='https://wa.me/918978972940?text='+encodeURIComponent(applicationText);
- window.open(waUrl,'_blank');
- if(files.length){ alert('Your application message has opened in WhatsApp. For security reasons, this browser cannot attach files automatically. Please attach the selected resume/document in the WhatsApp chat before sending.'); }
+ // Open WhatsApp directly, using the same submit flow as the Service Request form.
+ const whatsappWindow=window.open(waUrl,'_blank');
+ if(!whatsappWindow){ window.location.href=waUrl; }
+ if(files.length){ alert('Your job application message is ready in WhatsApp. Please attach your selected resume/document in the chat before sending.'); }
 });
 document.getElementById('serviceForm').addEventListener('submit',e=>{
  e.preventDefault();
