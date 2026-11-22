@@ -642,7 +642,7 @@ footer{background:#071a2a;color:#fff;padding:38px 0 24px}
           <div class="field"><label>Position Applying For *</label><input id="applicantPosition" required placeholder="Enter the job position"></div>
           <div class="field full"><label>Message</label><textarea id="applicantMessage" placeholder="Briefly tell us about your interest and relevant experience"></textarea></div>
           <div class="field full"><label for="applicantAttachment">Attach Resume / CV or Supporting Documents</label><input id="applicantAttachment" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" multiple><small class="attachment-help">You can attach PDF, Word or image files. Maximum 10 MB per file.</small></div>
-          <div class="field full"><button class="btn btn-primary" style="width:100%;cursor:pointer;border:0" type="submit">Submit Job Application on WhatsApp →</button></div>
+          <div class="field full"><button class="btn btn-primary" style="width:100%;cursor:pointer;border:0" type="submit">Submit Application & Share CV on WhatsApp →</button></div>
         </div>
       </form>
       <aside class="contact">
@@ -715,12 +715,13 @@ document.getElementById('jobApplicationForm').addEventListener('submit',e=>{
  if(phoneDigits.length!==10){ alert('Please enter a valid 10-digit mobile number after +91.'); applicantPhoneInput.focus(); return; }
  if(files.some(file=>file.size>10*1024*1024)){ alert('Each attachment must be 10 MB or smaller. Please choose smaller files.'); return; }
  const applicantPhone='+91 '+phoneDigits;
- const applicationText=`Hello AMB MOTORS,\n\nI would like to apply for a job.\nName: ${name}\nPhone: ${applicantPhone}\nEmail: ${email||'Not provided'}\nPosition: ${position}\nMessage: ${message||'Not provided'}\nAttachments: ${files.length ? files.map(file=>file.name).join(', ') : 'None'}`;
+ const applicationText=`Hello AMB MOTORS,\n\nI would like to apply for a job. Please find my application details below.\n\nName: ${name}\nPhone: ${applicantPhone}\nEmail: ${email||'Not provided'}\nPosition: ${position}\nMessage: ${message||'Not provided'}\n\n${files.length ? 'Selected file name(s): '+files.map(file=>file.name).join(', ') : 'I have not attached my CV yet.'}\n\nPlease find my updated CV attached in this WhatsApp chat for your review.`;
  const waUrl='https://wa.me/918978972940?text='+encodeURIComponent(applicationText);
- // Open WhatsApp directly, using the same submit flow as the Service Request form.
+ // WhatsApp click-to-chat opens a prefilled message; the applicant must tap Send
+ // and attach the actual CV file in WhatsApp.
  const whatsappWindow=window.open(waUrl,'_blank');
  if(!whatsappWindow){ window.location.href=waUrl; }
- if(files.length){ alert('Your job application message is ready in WhatsApp. Please attach your selected resume/document in the chat before sending.'); }
+ alert('Your application details are ready in WhatsApp. Please tap Send, then attach and send your updated CV in the same chat with AMB MOTORS.');
 });
 document.getElementById('serviceForm').addEventListener('submit',e=>{
  e.preventDefault();
